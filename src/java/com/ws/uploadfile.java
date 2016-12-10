@@ -5,6 +5,7 @@
  */
 package com.ws;
 
+import com.service.FileTransferer;
 import com.service.loanService;
 import javax.jws.WebService;
 import javax.jws.WebMethod;
@@ -23,7 +24,7 @@ public class uploadfile {
     @WebMethod(operationName = "uploadFilePDF")
     public String uploadFilePDF(@WebParam(name = "filename") String filename, @WebParam(name = "pdf") byte [] pdf) {
         //TODO write your implementation code here:
-        loanService ls = new loanService();
-        return ls.uploadFile(filename, pdf);
+        FileTransferer ls = new FileTransferer();
+        return ls.upload(filename, pdf);
     }
 }
