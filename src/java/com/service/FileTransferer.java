@@ -5,12 +5,17 @@
  */
 package com.service;
 
+import com.bean.RequestLoanBean;
+import com.dao.RequestLoanDao;
+import com.ws.RequestLoanService;
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.xml.ws.WebServiceException;
 
 /**
@@ -56,5 +61,7 @@ public class FileTransferer {
             throw new WebServiceException(ex);
         }
     }
+    
+    
 
 }
