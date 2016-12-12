@@ -65,7 +65,7 @@
               <forward name="gotoadminEdit" path="gotoadminEdit"/>
               <forward name="gotoDetle" path="gotoDetle"/>
               <forward name="gotoPagedatleuserlogin" path="gotoPagedatleuserlogin"/>
-              gotouserEdit
+          
         </action>
         <action  name="RequestLoanForm" parameter="todo" path="/LoanRequstAction" scope="session" type="com.action.LoanRequstAction">
         <forward name="gotorequestloansuccess" path="gotorequestloansuccess"/>

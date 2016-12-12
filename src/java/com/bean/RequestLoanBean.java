@@ -11,7 +11,7 @@ package com.bean;
  */
 public class RequestLoanBean {
 private int loan_id;
-      private int loanreq_id;
+    private int loanreq_id;
     private String citizen_id;
     private String title_type;
     private String firstName;
