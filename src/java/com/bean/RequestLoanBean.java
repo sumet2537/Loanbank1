@@ -10,8 +10,11 @@ package com.bean;
  * @author brass
  */
 public class RequestLoanBean {
-private int loan_id;
+
+
+    private int loan_id;
     private int loanreq_id;
+
     private String citizen_id;
     private String title_type;
     private String firstName;
@@ -32,9 +35,7 @@ private int loan_id;
     private int lncome_per_month;
     private Double periodloan;
     private Double netprofit;
-    
-    
-    
+
     private String copyidcard;
     private String copylicenses;
     private String copydocumenthome;
@@ -42,16 +43,24 @@ private int loan_id;
     private String copy_rename;
     private String salary_slip;
     private String copy_bankaccount;
-    
+
+    private byte[] copyidcardbyte;
+    private byte[] copylicensesbyte;
+    private byte[] copydocumenthomebyte;
+    private byte[] copymarriagebyte;
+    private byte[] copy_renamebyte;
+    private byte[] salary_slipbyte;
+    private byte[] copy_bankaccountbyte;
+
     private String banktype;
     private String loanstatustype;
-    
+
     private String createby;
     private String created;
     private String updated;
     private String updateby;
-    
-    private String status;   
+
+    private String status;
     private String todo;
 
     public int getLoan_id() {
@@ -62,7 +71,6 @@ private int loan_id;
         this.loan_id = loan_id;
     }
 
-    
     public String getCreated() {
         return created;
     }
@@ -71,7 +79,6 @@ private int loan_id;
         this.created = created;
     }
 
-    
     public int getLoanreq_id() {
         return loanreq_id;
     }
@@ -111,7 +118,6 @@ private int loan_id;
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
-
 
     public String getBirthdate() {
         return birthdate;
@@ -201,7 +207,6 @@ private int loan_id;
         this.hometype = hometype;
     }
 
-
     public int getLncome_per_month() {
         return lncome_per_month;
     }
@@ -234,8 +239,6 @@ private int loan_id;
         this.periodloan = periodloan;
     }
 
- 
-
     public Double getNetprofit() {
         return netprofit;
     }
@@ -251,7 +254,6 @@ private int loan_id;
     public void setUpdated(String updated) {
         this.updated = updated;
     }
-
 
     public String getCopyidcard() {
         return copyidcard;
@@ -293,7 +295,6 @@ private int loan_id;
         this.copy_rename = copy_rename;
     }
 
-
     public String getSalary_slip() {
         return salary_slip;
     }
@@ -334,8 +335,6 @@ private int loan_id;
         this.createby = createby;
     }
 
-
-
     public String getUpdateby() {
         return updateby;
     }
@@ -359,6 +358,61 @@ private int loan_id;
     public void setTodo(String todo) {
         this.todo = todo;
     }
-    
-    
+
+    public byte[] getCopyidcardbyte() {
+        return copyidcardbyte;
+    }
+
+    public void setCopyidcardbyte(byte[] copyidcardbyte) {
+        this.copyidcardbyte = copyidcardbyte;
+    }
+
+    public byte[] getCopylicensesbyte() {
+        return copylicensesbyte;
+    }
+
+    public void setCopylicensesbyte(byte[] copylicensesbyte) {
+        this.copylicensesbyte = copylicensesbyte;
+    }
+
+    public byte[] getCopydocumenthomebyte() {
+        return copydocumenthomebyte;
+    }
+
+    public void setCopydocumenthomebyte(byte[] copydocumenthomebyte) {
+        this.copydocumenthomebyte = copydocumenthomebyte;
+    }
+
+    public byte[] getCopymarriagebyte() {
+        return copymarriagebyte;
+    }
+
+    public void setCopymarriagebyte(byte[] copymarriagebyte) {
+        this.copymarriagebyte = copymarriagebyte;
+    }
+
+    public byte[] getCopy_renamebyte() {
+        return copy_renamebyte;
+    }
+
+    public void setCopy_renamebyte(byte[] copy_renamebyte) {
+        this.copy_renamebyte = copy_renamebyte;
+    }
+
+    public byte[] getSalary_slipbyte() {
+        return salary_slipbyte;
+    }
+
+    public void setSalary_slipbyte(byte[] salary_slipbyte) {
+        this.salary_slipbyte = salary_slipbyte;
+    }
+
+    public byte[] getCopy_bankaccountbyte() {
+        return copy_bankaccountbyte;
+    }
+
+    public void setCopy_bankaccountbyte(byte[] copy_bankaccountbyte) {
+        this.copy_bankaccountbyte = copy_bankaccountbyte;
+    }
+
 }
