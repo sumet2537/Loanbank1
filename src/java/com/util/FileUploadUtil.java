@@ -28,7 +28,7 @@ public class FileUploadUtil {
          FormFile fileN = null;
         
         fileN = getfile;
-        String part = "/Users/brass/Documents/patefile/" + fileN.getFileName();
+        String part = "/Users/brass/Documents/Loanbank1/web/image/uploade/" + fileN.getFileName();
         outputStream = new FileOutputStream(new File(part));
         outputStream.write(fileN.getFileData());
         
@@ -44,7 +44,7 @@ public class FileUploadUtil {
         Date date = new Date();
         DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH.mm.ss");
         String dt = dateFormat.format(date);               
-        File destFile = new File("Macintosh HD/Users/brass/Documents/patefile/" + dt + fileName);
+        File destFile = new File("/Users/brass/Documents/Loanbank1/web/image/uploade/" + dt + fileName);
         
         try {
             FileUtils.copyFile(file, destFile);
@@ -57,5 +57,27 @@ public class FileUploadUtil {
     return pathFile;
     }
 
-    
+     public  byte[] fileToByteArray(String fileName) throws FileNotFoundException, IOException {
+        String filePath = "/Users/brass/Documents/Loanbank1/web/image/uploade/" + fileName;
+        File file = new File(filePath);
+        BufferedInputStream inputStream = null;
+       byte[] imageBytes = null ;
+        // uploads a file
+        try {
+            FileInputStream fis = new FileInputStream(file);
+            inputStream = new BufferedInputStream(fis);
+             imageBytes = new byte[(int) file.length()];
+            inputStream.read(imageBytes);
+
+          
+
+//            inputStream.close();
+            System.out.println("File uploaded: " + filePath);
+        } catch (IOException ex) {
+            System.err.println(ex);
+        } finally {
+            inputStream.close();
+        }
+        return imageBytes;
+    }
 }

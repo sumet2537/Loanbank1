@@ -26,7 +26,7 @@ public class FileTransferer {
 
     public String upload(String fileName, byte[] imageBytes) {
 
-        String filePath = "D:/Test/Server/Upload/" + fileName;
+        String filePath = "/Users/brass/Documents/Loanbank1/web/image/uploade/" + fileName;
 
         try {
             FileOutputStream fos = new FileOutputStream(filePath);
@@ -44,7 +44,7 @@ public class FileTransferer {
     }
 
     public byte[] download(String fileName) {
-        String filePath = "D:/Test/Server/Upload/" + fileName;
+        String filePath = "/Users/brass/Documents/Loanbank1/web/image/uploade/" + fileName;
         System.out.println("Sending file: " + filePath);
 
         try {
