@@ -139,7 +139,8 @@ public class LoanRequstAction extends DispatchAction {
         request.getSession().setAttribute("loanList", loanList);
         return mapping.findForward("gotorequestloansuccess");
 
-    } public ActionForward insertbank(ActionMapping mapping, ActionForm form,
+    } 
+    public ActionForward insertbank(ActionMapping mapping, ActionForm form,
             HttpServletRequest request, HttpServletResponse response)
             throws Exception {
         RequestLoanForm loanform = (RequestLoanForm) form;
@@ -235,7 +236,7 @@ public class LoanRequstAction extends DispatchAction {
         loanList = dao.selectAll();
 
         request.getSession().setAttribute("loanList", loanList);
-        return mapping.findForward("gotorequestloansuccess");
+        return mapping.findForward("gotoPageManagermentLoan");
 
     }
 
