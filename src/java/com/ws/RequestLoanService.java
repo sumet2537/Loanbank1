@@ -7,6 +7,7 @@ package com.ws;
 
 import com.bean.RequestLoanBean;
 import com.dao.RequestLoanDao;
+import com.service.LoanService;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.jws.WebService;
@@ -26,10 +27,10 @@ public class RequestLoanService {
     @WebMethod(operationName = "RequestLoanService")
     public int hello(@WebParam(name = "RequestLoanBean") RequestLoanBean txt) {
         
-        RequestLoanDao dao = new RequestLoanDao();
+        LoanService service = new LoanService();
         int result =0;
         try {
-           result = dao.insertbank(txt);
+service.insertbank(txt);
         } catch (Exception ex) {
             Logger.getLogger(RequestLoanService.class.getName()).log(Level.SEVERE, null, ex);
         }

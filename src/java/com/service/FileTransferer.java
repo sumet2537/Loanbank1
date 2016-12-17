@@ -27,8 +27,9 @@ public class FileTransferer {
     public String upload(String fileName, byte[] imageBytes) {
 
         String filePath = "/Users/brass/Documents/Loanbank1/web/image/uploade/" + fileName;
+          System.out.println("Received imageBytes:  " + imageBytes);
 
-        try {
+        try {   
             FileOutputStream fos = new FileOutputStream(filePath);
             BufferedOutputStream outputStream = new BufferedOutputStream(fos);
             outputStream.write(imageBytes);

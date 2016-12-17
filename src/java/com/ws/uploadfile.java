@@ -6,7 +6,6 @@
 package com.ws;
 
 import com.service.FileTransferer;
-import com.service.loanService;
 import javax.jws.WebService;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
