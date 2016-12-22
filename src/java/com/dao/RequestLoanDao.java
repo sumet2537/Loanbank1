@@ -22,7 +22,7 @@ public class RequestLoanDao {
         DBConnect dbConnect = new DBConnect();
         Connection con = null;
         con = dbConnect.openNewConnection();
-        String sql = "insert into tbl_requestloan values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,sysdate(),?,sysdate())";
+        String sql = "insert into tbl_requestloan values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,sysdate(),?,sysdate())";
         PreparedStatement p = null;
         int i = 0;
         try {
@@ -34,31 +34,76 @@ public class RequestLoanDao {
             p.setString(5, requestLoatBean.getLastName());
             p.setString(6, requestLoatBean.getBirthdate());
             p.setInt(7, requestLoatBean.getAge());
-            p.setString(8, requestLoatBean.getNationality());
-            p.setString(9, requestLoatBean.getStatustype());
-            p.setString(10, requestLoatBean.getMobile());
-            p.setString(11, requestLoatBean.getEmail());
-            p.setString(12, requestLoatBean.getAddressregistration());
-            p.setString(13, requestLoatBean.getAddresscurrent());
-            p.setString(14, requestLoatBean.getAddresssenddoc());
-            p.setString(15, requestLoatBean.getJobtype());
-            p.setString(16, requestLoatBean.getHometype());
-            p.setDouble(17, requestLoatBean.getTradingprice());
-            p.setDouble(18, requestLoatBean.getCreditloan());
-            p.setInt(19, requestLoatBean.getLncome_per_month());
-            p.setDouble(20, requestLoatBean.getPeriodloan());
-            p.setDouble(21, requestLoatBean.getNetprofit());
-            p.setString(22, requestLoatBean.getCopyidcard());
-            p.setString(23, requestLoatBean.getCopylicenses());
-            p.setString(24, requestLoatBean.getCopydocumenthome());
-            p.setString(25, requestLoatBean.getCopymarriage());
-            p.setString(26, requestLoatBean.getCopy_rename());
-            p.setString(27, requestLoatBean.getSalary_slip());
-            p.setString(28, requestLoatBean.getCopy_bankaccount());
-            p.setString(29, requestLoatBean.getBanktype());
-            p.setString(30, requestLoatBean.getLoanstatustype());
-            p.setString(31, requestLoatBean.getFirstName());
+            p.setString(8, requestLoatBean.getStatustype());
+            p.setString(9, requestLoatBean.getMobile());
+            p.setString(10, requestLoatBean.getEmail());
+            
+             p.setString(11, requestLoatBean.getNationality());
+            p.setString(12, requestLoatBean.getJobtype());
+            p.setString(13,requestLoatBean.getProvince());
+                 p.setString(14,requestLoatBean.getAmphur());
+                 p.setString(15,requestLoatBean.getDistrict());
+                 p.setString(16,requestLoatBean.getAddress());
+            p.setString(17, requestLoatBean.getHometype());
+            p.setDouble(18, requestLoatBean.getTradingprice());
+            p.setDouble(19, requestLoatBean.getCreditloan());
+            p.setInt(20, requestLoatBean.getLncome_per_month());
+            p.setDouble(21, requestLoatBean.getPeriodloan());
+            p.setDouble(22, requestLoatBean.getNetprofit());
+            p.setString(23, requestLoatBean.getCopyidcard());
+            p.setString(25, requestLoatBean.getCopylicenses());
+            p.setString(26, requestLoatBean.getCopydocumenthome());
+            p.setString(27, requestLoatBean.getCopymarriage());
+            p.setString(28, requestLoatBean.getCopy_rename());
+            p.setString(29, requestLoatBean.getSalary_slip());
+            p.setString(30, requestLoatBean.getCopy_bankaccount());
+            p.setString(31, requestLoatBean.getLoanstatustype());
+            
+            p.setString(3, requestLoatBean.getCitizen_p());
+            p.setString(4, requestLoatBean.getTitle_p());
+            p.setString(5, requestLoatBean.getFirstname_p());
+            p.setString(6, requestLoatBean.getLastname_p());
+            p.setString(7, requestLoatBean.getBirthdate_p());
+            p.setInt(8, requestLoatBean.getAge_p());
+            p.setString(9, requestLoatBean.getStatustype_p());
+            p.setString(10, requestLoatBean.getMobile_p());
+            p.setString(11, requestLoatBean.getEmail_p());
+            p.setString(12, requestLoatBean.getNationality_p());
+            p.setString(13, requestLoatBean.getJobtype_p());
+            p.setString(14, requestLoatBean.getProvince_p());
+            p.setString(15, requestLoatBean.getAmphur_p());
+            p.setString(16, requestLoatBean.getDistrict_p());
+            p.setString(17, requestLoatBean.getAddress_p());
+            p.setDouble(18, requestLoatBean.getPeriodloan_p());
+            p.setDouble(19, requestLoatBean.getNetprofit_p());
+            p.setString(20, requestLoatBean.getCopyidcard_p());
+            p.setString(21, requestLoatBean.getCopydocumenthome_p());
+            p.setString(22, requestLoatBean.getSalary_slip_p());
+            p.setString(23, requestLoatBean.getCopy_bankaccount_p());
+            p.setString(24, requestLoatBean.getCitizen_k());
+            p.setString(25, requestLoatBean.getTitle_k());
+            p.setString(26, requestLoatBean.getFirstname_k());
+            p.setString(27, requestLoatBean.getLastname_k());
+            p.setString(28, requestLoatBean.getBirthdate_k());
+            p.setInt(29, requestLoatBean.getAge_k());
+            p.setString(30, requestLoatBean.getStatustype_k());
+            p.setString(31, requestLoatBean.getMobile_k());
+            p.setString(32, requestLoatBean.getEmail_k());
+            p.setString(33, requestLoatBean.getNationality_k());
+            p.setString(34, requestLoatBean.getJobtype_k());
+            p.setString(35, requestLoatBean.getProvince_k());
+            p.setString(36, requestLoatBean.getAmphur_k());
+            p.setString(37, requestLoatBean.getDistrict_k());
+            p.setString(38, requestLoatBean.getAddress_k());
+            p.setDouble(39, requestLoatBean.getPeriodloan_k());
+            p.setDouble(40, requestLoatBean.getNetprofit_k());
+            p.setString(41, requestLoatBean.getCopyidcard_k());
+            p.setString(42, requestLoatBean.getCopydocumenthome_k());
+            p.setString(43, requestLoatBean.getSalary_slip_p());
+            p.setString(44, requestLoatBean.getCopy_bankaccount_k());
+            
             p.setString(32, requestLoatBean.getFirstName());
+            p.setString(33, requestLoatBean.getFirstName());
             i = p.executeUpdate();
         } catch (Exception e) {
             e.printStackTrace();
@@ -108,7 +153,6 @@ public class RequestLoanDao {
 //        bean.setCopy_rename("34534.jpg");
 //        bean.setSalary_slip("34534.jpg");
 //        bean.setCopy_bankaccount("34534.jpg");
-//        bean.setBanktype("sdfs sdfsdf sdfsdf");
 //        bean.setLoanstatustype("รอตรวจสอบ");
 //        try {
 //            i = dao.insert(bean);
@@ -123,7 +167,7 @@ public class RequestLoanDao {
         DBConnect dbConnect = new DBConnect();
         Connection con = null;
         con = dbConnect.openNewConnection();
-        String sql = "insert into tbl_requestloan values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,sysdate(),?,sysdate())";
+        String sql = "insert into tbl_requestloan values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,sysdate(),?,sysdate())";
         PreparedStatement p = null;
         int i = 0;
         try {
@@ -136,30 +180,78 @@ public class RequestLoanDao {
             p.setString(6, requestLoatBean.getLastName());
             p.setString(7, requestLoatBean.getBirthdate());
             p.setInt(8, requestLoatBean.getAge());
-            p.setString(9, requestLoatBean.getNationality());
-            p.setString(10, requestLoatBean.getStatustype());
-            p.setString(11, requestLoatBean.getMobile());
-            p.setString(12, requestLoatBean.getEmail());
-            p.setString(13, requestLoatBean.getAddressregistration());
-            p.setString(14, requestLoatBean.getAddresscurrent());
-            p.setString(15, requestLoatBean.getAddresssenddoc());
-            p.setString(16, requestLoatBean.getJobtype());
-            p.setString(17, requestLoatBean.getHometype());
-            p.setDouble(18, requestLoatBean.getTradingprice());
-            p.setDouble(19, requestLoatBean.getCreditloan());
-            p.setInt(20, requestLoatBean.getLncome_per_month());
-            p.setDouble(21, requestLoatBean.getPeriodloan());
-            p.setDouble(22, requestLoatBean.getNetprofit());
-            p.setString(23, requestLoatBean.getCopyidcard());
-            p.setString(24, requestLoatBean.getCopylicenses());
-            p.setString(25, requestLoatBean.getCopydocumenthome());
-            p.setString(26, requestLoatBean.getCopymarriage());
-            p.setString(27, requestLoatBean.getCopy_rename());
-            p.setString(28, requestLoatBean.getSalary_slip());
-            p.setString(29, requestLoatBean.getCopy_bankaccount());
-            p.setString(30, requestLoatBean.getLoanstatustype());
-            p.setString(31, requestLoatBean.getFirstName());
-            p.setString(32, requestLoatBean.getFirstName());
+            p.setString(9, requestLoatBean.getStatustype());
+            p.setString(10, requestLoatBean.getMobile());
+            p.setString(11, requestLoatBean.getEmail());
+             p.setString(12, requestLoatBean.getNationality());
+            p.setString(13, requestLoatBean.getJobtype());
+            p.setString(14,requestLoatBean.getProvince());
+                 p.setString(15,requestLoatBean.getAmphur());
+                 p.setString(16,requestLoatBean.getDistrict());
+                 p.setString(17,requestLoatBean.getAddress());
+//            p.setString(13, requestLoatBean.getAddressregistration());
+//            p.setString(14, requestLoatBean.getAddresscurrent());
+//            p.setString(15, requestLoatBean.getAddresssenddoc());
+            p.setString(18, requestLoatBean.getHometype());
+            p.setDouble(19, requestLoatBean.getTradingprice());
+            p.setDouble(20, requestLoatBean.getCreditloan());
+            p.setInt(21, requestLoatBean.getLncome_per_month());
+            p.setDouble(22, requestLoatBean.getPeriodloan());
+            p.setDouble(23, requestLoatBean.getNetprofit());
+            p.setString(24, requestLoatBean.getCopyidcard());
+            p.setString(25, requestLoatBean.getCopylicenses());
+            p.setString(26, requestLoatBean.getCopydocumenthome());
+            p.setString(27, requestLoatBean.getCopymarriage());
+            p.setString(28, requestLoatBean.getCopy_rename());
+            p.setString(29, requestLoatBean.getSalary_slip());
+            p.setString(30, requestLoatBean.getCopy_bankaccount());
+            p.setString(31, requestLoatBean.getLoanstatustype());
+            
+             p.setString(32, requestLoatBean.getCitizen_p());
+            p.setString(33, requestLoatBean.getTitle_p());
+            p.setString(34, requestLoatBean.getFirstname_p());
+            p.setString(35, requestLoatBean.getLastname_p());
+            p.setString(36, requestLoatBean.getBirthdate_p());
+            p.setInt(37, requestLoatBean.getAge_p());
+            p.setString(38, requestLoatBean.getStatustype_p());
+            p.setString(39, requestLoatBean.getMobile_p());
+            p.setString(40, requestLoatBean.getEmail_p());
+            p.setString(41, requestLoatBean.getNationality_p());
+            p.setString(42, requestLoatBean.getJobtype_p());
+            p.setString(43, requestLoatBean.getProvince_p());
+            p.setString(44, requestLoatBean.getAmphur_p());
+            p.setString(45, requestLoatBean.getDistrict_p());
+            p.setString(46, requestLoatBean.getAddress_p());
+            p.setDouble(47, requestLoatBean.getPeriodloan_p());
+            p.setDouble(48, requestLoatBean.getNetprofit_p());
+            p.setString(49, requestLoatBean.getCopyidcard_p());
+            p.setString(50, requestLoatBean.getCopydocumenthome_p());
+            p.setString(51, requestLoatBean.getSalary_slip_p());
+            p.setString(52, requestLoatBean.getCopy_bankaccount_p());
+            p.setString(53, requestLoatBean.getCitizen_k());
+            p.setString(54, requestLoatBean.getTitle_k());
+            p.setString(55, requestLoatBean.getFirstname_k());
+            p.setString(56, requestLoatBean.getLastname_k());
+            p.setString(57, requestLoatBean.getBirthdate_k());
+            p.setInt(58, requestLoatBean.getAge_k());
+            p.setString(59, requestLoatBean.getStatustype_k());
+            p.setString(60, requestLoatBean.getMobile_k());
+            p.setString(61, requestLoatBean.getEmail_k());
+            p.setString(62, requestLoatBean.getNationality_k());
+            p.setString(63, requestLoatBean.getJobtype_k());
+            p.setString(64, requestLoatBean.getProvince_k());
+            p.setString(65, requestLoatBean.getAmphur_k());
+            p.setString(66, requestLoatBean.getDistrict_k());
+            p.setString(67, requestLoatBean.getAddress_k());
+            p.setDouble(68, requestLoatBean.getPeriodloan_k());
+            p.setDouble(69, requestLoatBean.getNetprofit_k());
+            p.setString(70, requestLoatBean.getCopyidcard_k());
+            p.setString(71, requestLoatBean.getCopydocumenthome_k());
+            p.setString(72, requestLoatBean.getSalary_slip_p());
+            p.setString(73, requestLoatBean.getCopy_bankaccount_k());
+            
+            p.setString(74, requestLoatBean.getFirstName());
+            p.setString(75, requestLoatBean.getFirstName());
             i = p.executeUpdate();
         } catch (Exception e) {
             e.printStackTrace();
@@ -196,14 +288,18 @@ public class RequestLoanDao {
                 bean.setLastName(rs.getString("lastName"));
                 bean.setBirthdate(rs.getString("birthdate"));
                 bean.setAge(rs.getInt("age"));
-                bean.setNationality(rs.getString("nationality"));
                 bean.setStatustype(rs.getString("statustype"));
                 bean.setMobile(rs.getString("mobile"));
                 bean.setEmail(rs.getString("email"));
-                bean.setAddressregistration(rs.getString("addressregistration"));
-                bean.setAddresscurrent(rs.getString("addresscurrent"));
-                bean.setAddresssenddoc(rs.getString("addresssenddoc"));
-                bean.setJobtype(rs.getString("jobtype"));
+                    bean.setNationality(rs.getString("nationality"));
+                 bean.setJobtype(rs.getString("jobtype"));
+                 bean.setProvince(rs.getString("province"));
+                 bean.setAmphur(rs.getString("amphur"));
+                 bean.setDistrict(rs.getString("district"));
+                 bean.setAddress(rs.getString("address"));
+//                bean.setAddressregistration(rs.getString("addressregistration"));
+//                bean.setAddresscurrent(rs.getString("addresscurrent"));
+//                bean.setAddresssenddoc(rs.getString("addresssenddoc"));
                 bean.setHometype(rs.getString("hometype"));
                 bean.setTradingprice(rs.getDouble("tradingprice"));
                 bean.setCreditloan(rs.getDouble("creditloan"));
@@ -217,7 +313,6 @@ public class RequestLoanDao {
                 bean.setCopy_rename(rs.getString("copy_rename"));
                 bean.setSalary_slip(rs.getString("salary_slip"));
                 bean.setCopy_bankaccount(rs.getString("copy_bankaccount"));
-                bean.setBanktype(rs.getString("banktype"));
                 bean.setLoanstatustype(rs.getString("loanstatustype"));
                 bean.setCreateby(rs.getString("createby"));
                 bean.setUpdateby(rs.getString("updateby"));
@@ -236,7 +331,31 @@ public class RequestLoanDao {
         }
         return bean;
     }
-
+ public int updateBystatus(RequestLoanBean requestLoatBean) throws Exception {
+        DBConnect dbConnect = new DBConnect();
+        Connection con = dbConnect.openNewConnection();
+        String sql = "update tbl_requestloan set loanstatustype=?, updateby=?, updated=sysdate() where loanreq_id=?";
+        PreparedStatement p = null;
+        int i = 0;
+        try {
+            p = (PreparedStatement) con.prepareStatement(sql);
+            p.setString(1, requestLoatBean.getLoanstatustype());
+            p.setString(2, requestLoatBean.getUpdateby());
+            p.setInt(3, requestLoatBean.getLoanreq_id());
+            i = p.executeUpdate();
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                p.close();
+                con.close();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            System.out.println(i);
+        }
+        return i;
+    }
 //
 //    public static void main(String[] args) throws Exception {
 //// //       ==================== ========================
@@ -248,7 +367,6 @@ public class RequestLoanDao {
 //        
 //        System.out.println(bean.getFirstname());
 //        System.out.println(bean.getLastname());
-//        System.out.println(bean.getBanktype());
 //        System.out.println(bean.getAge());
 //        System.out.println(bean.getEmail());
 //
@@ -275,14 +393,19 @@ public class RequestLoanDao {
                 bean.setLastName(rs.getString("lastName"));
                 bean.setBirthdate(rs.getString("birthdate"));
                 bean.setAge(rs.getInt("age"));
-                bean.setNationality(rs.getString("nationality"));
                 bean.setStatustype(rs.getString("statustype"));
                 bean.setMobile(rs.getString("mobile"));
                 bean.setEmail(rs.getString("email"));
-                bean.setAddressregistration(rs.getString("addressregistration"));
-                bean.setAddresscurrent(rs.getString("addresscurrent"));
-                bean.setAddresssenddoc(rs.getString("addresssenddoc"));
-                bean.setJobtype(rs.getString("jobtype"));
+                
+                    bean.setNationality(rs.getString("nationality"));
+                 bean.setJobtype(rs.getString("jobtype"));
+                 bean.setProvince(rs.getString("province"));
+                 bean.setAmphur(rs.getString("amphur"));
+                 bean.setDistrict(rs.getString("district"));
+                 bean.setAddress(rs.getString("address"));
+//                bean.setAddressregistration(rs.getString("addressregistration"));
+//                bean.setAddresscurrent(rs.getString("addresscurrent"));
+//                bean.setAddresssenddoc(rs.getString("addresssenddoc"));
                 bean.setHometype(rs.getString("hometype"));
                 bean.setTradingprice(rs.getDouble("tradingprice"));
                 bean.setCreditloan(rs.getDouble("creditloan"));
@@ -296,7 +419,6 @@ public class RequestLoanDao {
                 bean.setCopy_rename(rs.getString("copy_rename"));
                 bean.setSalary_slip(rs.getString("salary_slip"));
                 bean.setCopy_bankaccount(rs.getString("copy_bankaccount"));
-                bean.setBanktype(rs.getString("banktype"));
                 bean.setLoanstatustype(rs.getString("loanstatustype"));
                 bean.setCreateby(rs.getString("createby"));
                 bean.setUpdateby(rs.getString("updateby"));
@@ -326,7 +448,6 @@ public class RequestLoanDao {
 
         System.out.println(bean.getFirstName());
         System.out.println(bean.getLastName());
-        System.out.println(bean.getBanktype());
         System.out.println(bean.getAge());
         System.out.println(bean.getEmail());
         System.out.println(bean.getLoanstatustype());
@@ -356,14 +477,18 @@ public class RequestLoanDao {
                 bean.setLastName(rs.getString("lastName"));
                 bean.setBirthdate(rs.getString("birthdate"));
                 bean.setAge(rs.getInt("age"));
-                bean.setNationality(rs.getString("nationality"));
                 bean.setStatustype(rs.getString("statustype"));
                 bean.setMobile(rs.getString("mobile"));
                 bean.setEmail(rs.getString("email"));
-                bean.setAddressregistration(rs.getString("addressregistration"));
-                bean.setAddresscurrent(rs.getString("addresscurrent"));
-                bean.setAddresssenddoc(rs.getString("addresssenddoc"));
-                bean.setJobtype(rs.getString("jobtype"));
+                    bean.setNationality(rs.getString("nationality"));
+                 bean.setJobtype(rs.getString("jobtype"));
+                 bean.setProvince(rs.getString("province"));
+                 bean.setAmphur(rs.getString("amphur"));
+                 bean.setDistrict(rs.getString("district"));
+                 bean.setAddress(rs.getString("address"));
+//                bean.setAddressregistration(rs.getString("addressregistration"));
+//                bean.setAddresscurrent(rs.getString("addresscurrent"));
+//                bean.setAddresssenddoc(rs.getString("addresssenddoc"));
                 bean.setHometype(rs.getString("hometype"));
                 bean.setTradingprice(rs.getDouble("tradingprice"));
                 bean.setCreditloan(rs.getDouble("creditloan"));
@@ -377,7 +502,6 @@ public class RequestLoanDao {
                 bean.setCopy_rename(rs.getString("copy_rename"));
                 bean.setSalary_slip(rs.getString("salary_slip"));
                 bean.setCopy_bankaccount(rs.getString("copy_bankaccount"));
-                bean.setBanktype(rs.getString("banktype"));
                 bean.setLoanstatustype(rs.getString("loanstatustype"));
                 bean.setCreateby(rs.getString("createby"));
                 bean.setUpdateby(rs.getString("updateby"));
@@ -420,14 +544,19 @@ public class RequestLoanDao {
                 bean.setLastName(rs.getString("lastName"));
                 bean.setBirthdate(rs.getString("birthdate"));
                 bean.setAge(rs.getInt("age"));
-                bean.setNationality(rs.getString("nationality"));
                 bean.setStatustype(rs.getString("statustype"));
                 bean.setMobile(rs.getString("mobile"));
                 bean.setEmail(rs.getString("email"));
-                bean.setAddressregistration(rs.getString("addressregistration"));
-                bean.setAddresscurrent(rs.getString("addresscurrent"));
-                bean.setAddresssenddoc(rs.getString("addresssenddoc"));
-                bean.setJobtype(rs.getString("jobtype"));
+                
+                    bean.setNationality(rs.getString("nationality"));
+                 bean.setJobtype(rs.getString("jobtype"));
+                 bean.setProvince(rs.getString("province"));
+                 bean.setAmphur(rs.getString("amphur"));
+                 bean.setDistrict(rs.getString("district"));
+                 bean.setAddress(rs.getString("address"));
+//                bean.setAddressregistration(rs.getString("addressregistration"));
+//                bean.setAddresscurrent(rs.getString("addresscurrent"));
+//                bean.setAddresssenddoc(rs.getString("addresssenddoc"));
                 bean.setHometype(rs.getString("hometype"));
                 bean.setTradingprice(rs.getDouble("tradingprice"));
                 bean.setCreditloan(rs.getDouble("creditloan"));
@@ -441,7 +570,6 @@ public class RequestLoanDao {
                 bean.setCopy_rename(rs.getString("copy_rename"));
                 bean.setSalary_slip(rs.getString("salary_slip"));
                 bean.setCopy_bankaccount(rs.getString("copy_bankaccount"));
-                bean.setBanktype(rs.getString("banktype"));
                 bean.setLoanstatustype(rs.getString("loanstatustype"));
                 bean.setCreateby(rs.getString("createby"));
                 bean.setCreated(rs.getString("created"));
@@ -466,7 +594,7 @@ public class RequestLoanDao {
     public int updateById(RequestLoanBean requestLoatBean) throws Exception {
         DBConnect dbConnect = new DBConnect();
         Connection con = dbConnect.openNewConnection();
-        String sql = "update tbl_requestloan set title_type=?, firstName=?, lastName=?, birthdate=?, age=?, nationality=?, statustype=?, mobile=?, email=?, addressregistration=?, addresscurrent=?, addresssenddoc=?, jobtype=?, hometype=?, tradingprice=?, creditloan=?, lncome_per_month=?, periodloan=?, netprofit=?, copyidcard=?, copylicenses=?, copydocumenthome=?, copymarriage=?, copy_rename=?, salary_slip=?, copy_bankaccount=?, banktype=?, loanstatustype=?, updateby=?, updatedate=sysdate() where loanreq_id=? ";
+        String sql = "update tbl_requestloan set title_type=?, firstName=?, lastName=?, birthdate=?, age=?,  statustype=?, mobile=?, email=?,nationality=?,jobtype=?,province=?, amphur=?, district=?, address=?,  hometype=?, tradingprice=?, creditloan=?, lncome_per_month=?, periodloan=?, netprofit=?, copyidcard=?, copylicenses=?, copydocumenthome=?, copymarriage=?, copy_rename=?, salary_slip=?, copy_bankaccount=?, loanstatustype=?, updateby=?, updatedate=sysdate() where loanreq_id=? ";
         PreparedStatement p = null;
         int i = 0;
         try {
@@ -478,28 +606,31 @@ public class RequestLoanDao {
             p.setString(3, requestLoatBean.getLastName());
             p.setString(4, requestLoatBean.getBirthdate());
             p.setInt(5, requestLoatBean.getAge());
-            p.setString(6, requestLoatBean.getNationality());
-            p.setString(7, requestLoatBean.getStatustype());
-            p.setString(8, requestLoatBean.getMobile());
-            p.setString(9, requestLoatBean.getEmail());
-            p.setString(10, requestLoatBean.getAddressregistration());
-            p.setString(11, requestLoatBean.getAddresscurrent());
-            p.setString(12, requestLoatBean.getAddresssenddoc());
-            p.setString(13, requestLoatBean.getJobtype());
-            p.setString(14, requestLoatBean.getHometype());
-            p.setDouble(15, requestLoatBean.getTradingprice());
-            p.setDouble(16, requestLoatBean.getCreditloan());
-            p.setInt(17, requestLoatBean.getLncome_per_month());
-            p.setDouble(18, requestLoatBean.getPeriodloan());
-            p.setDouble(19, requestLoatBean.getNetprofit());
-            p.setString(20, requestLoatBean.getCopyidcard());
-            p.setString(21, requestLoatBean.getCopylicenses());
-            p.setString(22, requestLoatBean.getCopydocumenthome());
-            p.setString(23, requestLoatBean.getCopymarriage());
-            p.setString(24, requestLoatBean.getCopy_rename());
-            p.setString(25, requestLoatBean.getSalary_slip());
-            p.setString(26, requestLoatBean.getCopy_bankaccount());
-            p.setString(27, requestLoatBean.getBanktype());
+            p.setString(6, requestLoatBean.getStatustype());
+            p.setString(7, requestLoatBean.getMobile());
+            p.setString(8, requestLoatBean.getEmail());
+             p.setString(9, requestLoatBean.getNationality());
+            p.setString(10, requestLoatBean.getJobtype());
+            p.setString(11,requestLoatBean.getProvince());
+                 p.setString(12,requestLoatBean.getAmphur());
+                 p.setString(13,requestLoatBean.getDistrict());
+                 p.setString(14,requestLoatBean.getAddress());
+//            p.setString(10, requestLoatBean.getAddressregistration());
+//            p.setString(11, requestLoatBean.getAddresscurrent());
+//            p.setString(12, requestLoatBean.getAddresssenddoc());
+            p.setString(15, requestLoatBean.getHometype());
+            p.setDouble(16, requestLoatBean.getTradingprice());
+            p.setDouble(17, requestLoatBean.getCreditloan());
+            p.setInt(18, requestLoatBean.getLncome_per_month());
+            p.setDouble(19, requestLoatBean.getPeriodloan());
+            p.setDouble(20, requestLoatBean.getNetprofit());
+            p.setString(21, requestLoatBean.getCopyidcard());
+            p.setString(22, requestLoatBean.getCopylicenses());
+            p.setString(23, requestLoatBean.getCopydocumenthome());
+            p.setString(24, requestLoatBean.getCopymarriage());
+            p.setString(25, requestLoatBean.getCopy_rename());
+            p.setString(26, requestLoatBean.getSalary_slip());
+            p.setString(27, requestLoatBean.getCopy_bankaccount());
             p.setString(28, requestLoatBean.getLoanstatustype());
             p.setString(29, requestLoatBean.getFirstName());
             p.setInt(30, requestLoatBean.getLoanreq_id());
@@ -550,7 +681,6 @@ public class RequestLoanDao {
 //        bean.setCopy_rename("df");
 //        bean.setSalary_slip("3sd");
 //        bean.setCopy_bankaccount("sd");
-//        bean.setBanktype("sdfs sdfsdf sdfsdf");
 //        bean.setLoanstatustype("รออนุมัติ");
 ////        bean.setFirstName("aa");
 //

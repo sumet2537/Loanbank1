@@ -7,6 +7,7 @@
 
 <struts-config>
     <form-beans>
+        <form-bean name="SenddatawsapproveForm" type="com.form.SenddatawsapproveForm"/>
         <form-bean name="RequestLoanForm" type="com.form.RequestLoanForm"/>
         <form-bean name="registerForm" type="com.form.registerForm"/>
         <form-bean name="chahgewdForm" type="com.form.chahgewdForm"/>
@@ -73,7 +74,9 @@
          <forward name="gotoDetle_requestloan" path="gotoDetle_requestloan"/>
          
         </action>
-        
+        <action name="SenddatawsapproveForm" parameter="todo" path="/SenddatawsapproveAction" scope="session" type="com.action.SenddatawsapproveAction">
+        <forward name="gotoDetle_requestloan" path="gotoDetle_requestloan"/>
+        </action>
     </action-mappings>
     
     <controller processorClass="org.apache.struts.tiles.TilesRequestProcessor"/>

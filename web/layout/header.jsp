@@ -5,7 +5,7 @@
     <!-- mini logo for sidebar mini 50x50 pixels -->
     <span class="logo-mini"><b>L</b>o<b>a</b>n</span>
     <!-- logo for regular state and mobile devices -->
-    <span class="logo-lg"><b>สินเชื่อ</b>บ้าน </span>
+    <span class="logo-lg"><b>สินเชื่อ</b>บ้าน ผ่อนสบาย </span>
 </a>
 <!-- Header Navbar: style can be found in header.less -->
 <nav class="navbar navbar-static-top" role="navigation">
@@ -30,7 +30,7 @@
                  <a href="PageAction.do?todo=gotoPageHome" class="logo">
                     <!--<img  src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image" />-->
                   
-                   <span class="logo-lg"><b>สินเชื่อ</b>บ้าน ผ่อนสบาย </span>
+                   <span class="logo-lg"><b>ธนาคาร</b> </span>
                 </a>
 <!--                <ul class="dropdown-menu">
                      User image 

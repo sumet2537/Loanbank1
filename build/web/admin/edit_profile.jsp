@@ -23,7 +23,7 @@
                         <!--<div align="center">-->
                         <div class="box box-solid" >
                             <br>
-                           <strong class="text-center">  <h3> แก้ไขข้อมูลลูกค้า </h3> </strong>
+                           <h3> <strong class="text-center">  แก้ไขข้อมูลลูกค้า</strong> </h3> 
                             <div class="box-body">
                                 <div class="row">
                                     <fieldset class="col-md-8 col-md-offset-1">
@@ -61,7 +61,7 @@
                                         <div class="form-group col-md-12">
                                             <label class="col-md-4 control-label" for="birthdate">วันเดือนปีเกิด <span class="require" style="color:red;">*</span></label>
                                             <div class="col-md-8 col-lg-4">
-                                                <input class="form-control" type="date" name="birthdate" value="<%=bean.getBirthdate()%>" >
+                                                <input class="form-control" type="date" name="birthdate" <%=bean.getBirthdate()%> >
                                             </div></div>
                                               <div class="form-group col-md-12">
                                             <label class="col-md-4 control-label" for="age">อายุ <span class="require" style="color:red;">*</span></label>

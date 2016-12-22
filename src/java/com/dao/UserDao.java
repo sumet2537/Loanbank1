@@ -586,14 +586,14 @@ public class UserDao {
             }
         }
     }
-
-    public void deleteByUserId(UserBean userbean) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    public UserBean selectByUserId(String userLogin) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+//
+//    public void deleteByUserId(UserBean userbean) {
+//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+//    }
+//
+//    public UserBean selectByUserId(String userLogin) {
+//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+//    }
 }
 //    public static void main(String[] args) {
 //        UserDao userDao = new UserDao();

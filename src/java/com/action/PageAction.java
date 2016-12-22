@@ -54,20 +54,18 @@ public class PageAction extends DispatchAction {
 
         return mapping.findForward("gotoPageLogin");
     }
-    
-    
-     public ActionForward  gotoPageAdminManagermentLoanrequest(ActionMapping mapping, ActionForm form,
+
+    public ActionForward gotoPageAdminManagermentLoanrequest(ActionMapping mapping, ActionForm form,
             HttpServletRequest request, HttpServletResponse response)
             throws Exception {
 
         return mapping.findForward(" gotoPageAdminManagermentLoanrequest");
     }
-     
-     
-        public ActionForward  gotoPageManagermentLoan(ActionMapping mapping, ActionForm form,
+
+    public ActionForward gotoPageManagermentLoan(ActionMapping mapping, ActionForm form,
             HttpServletRequest request, HttpServletResponse response)
             throws Exception {
-  List<RequestLoanBean> requestList = new ArrayList<RequestLoanBean>();
+        List<RequestLoanBean> requestList = new ArrayList<RequestLoanBean>();
         RequestLoanDao dao = new RequestLoanDao();
 
         requestList = dao.selectAll();
@@ -134,10 +132,11 @@ public class PageAction extends DispatchAction {
         request.getSession().setAttribute("requestBean", userBean);
         return mapping.findForward("gotoPageLoanRequest");
     }
-   public ActionForward  gotoPageDetleRequest(ActionMapping mapping, ActionForm form,
+
+    public ActionForward gotoPageDetleRequest(ActionMapping mapping, ActionForm form,
             HttpServletRequest request, HttpServletResponse response)
             throws Exception {
         return mapping.findForward("gotoPageDetleRequest");
-   
-}
+
+    }
 }
