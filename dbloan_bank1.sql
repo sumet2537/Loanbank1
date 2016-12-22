@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Dec 08, 2016 at 01:57 AM
+-- Generation Time: Dec 19, 2016 at 04:57 AM
 -- Server version: 5.6.28
 -- PHP Version: 7.0.10
 
@@ -21,35 +21,45 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `tbl_approveloan` (
-  `approve_id` int(11) UNSIGNED NOT NULL,
-  `loanreq_id` int(11) DEFAULT NULL,
-  `loanbankreq_id` int(11) DEFAULT NULL,
-  `firstname` varchar(50) DEFAULT NULL,
-  `judgment` varchar(50) DEFAULT NULL,
-  `approvedamount` int(11) DEFAULT NULL,
-  `installlments` int(11) DEFAULT NULL,
-  `timerepayment` varchar(2) DEFAULT NULL,
-  `created` int(11) DEFAULT NULL,
-  `createdby` varchar(50) DEFAULT NULL,
-  `updated` int(11) DEFAULT NULL,
-  `updateby` varchar(50) DEFAULT NULL
+  `approve_id` int(11) UNSIGNED NOT NULL COMMENT 'รหัสอนุมัติ',
+  `bank_id` varchar(50) DEFAULT NULL COMMENT 'รหัสชื่อธนาคาร',
+  `loanreq_id` int(11) DEFAULT NULL COMMENT 'รหัสขอสินเชื่อ',
+  `firstname` varchar(50) DEFAULT NULL COMMENT 'ชื่อผู้กู้',
+  `judgment` varchar(50) DEFAULT NULL COMMENT 'ผลการพิจารณา',
+  `loanstatusbank` varchar(50) DEFAULT NULL COMMENT 'สถานะ',
+  `approvedamount` double DEFAULT NULL COMMENT 'วงเงินอนุมัติเบื่องต้น',
+  `installlments` double DEFAULT NULL COMMENT 'ยอดผ่อนชำละต่อเดือน',
+  `timerepayment` varchar(2) DEFAULT NULL COMMENT 'ระยะเวลาการผ่อน',
+  `position` varchar(50) DEFAULT NULL COMMENT 'ตำแหน่งผู้อนุมัติ',
+  `createdby` varchar(50) DEFAULT NULL COMMENT 'ชื่อผู้อนุมัติ',
+  `created` timestamp NULL DEFAULT NULL COMMENT 'วันที่สร้าง',
+  `updateby` varchar(50) DEFAULT NULL COMMENT 'ชื่อผุ้แก้ไข',
+  `updated` timestamp NULL DEFAULT NULL COMMENT 'วันที่แก้ไข'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- --------------------------------------------------------
-
 --
--- Table structure for table `tbl_bankrequest`
+-- Dumping data for table `tbl_approveloan`
 --
 
-CREATE TABLE `tbl_bankrequest` (
-  `loanbankreq_id` int(11) UNSIGNED NOT NULL COMMENT 'รหัสธนาคาร',
-  `loanreq_id` int(11) DEFAULT NULL COMMENT 'รหัสสินเชื่อ',
-  `banktype` varchar(50) DEFAULT NULL COMMENT 'ชื่อธนาคาร',
-  `createdd` timestamp NULL DEFAULT NULL COMMENT 'วันที่สร้าง',
-  `createdby` varchar(50) DEFAULT NULL COMMENT 'ชื่อผุ้สร้าง',
-  `updated` timestamp NULL DEFAULT NULL COMMENT 'วันที่แก้ไข',
-  `updateby` varchar(50) DEFAULT NULL COMMENT 'ชื่อผู้แก้ไข'
-) ENGINE=MEMORY DEFAULT CHARSET=utf8;
+INSERT INTO `tbl_approveloan` (`approve_id`, `bank_id`, `loanreq_id`, `firstname`, `judgment`, `loanstatusbank`, `approvedamount`, `installlments`, `timerepayment`, `position`, `createdby`, `created`, `updateby`, `updated`) VALUES
+(1, '12345bkb', 129, NULL, '', 'อนุมัติ', 0, 0, '1', 'ผู้ตรวจสอบ', 'สุเมธ', '2016-12-18 20:29:29', NULL, '2016-12-18 20:29:29'),
+(2, '12345bkb', 129, NULL, '', 'อนุมัติ', 0, 0, '1', 'ผู้ตรวจสอบ', 'สุเมธ', '2016-12-18 20:30:47', NULL, '2016-12-18 20:30:47'),
+(3, '12345bkb', 129, NULL, '', 'อนุมัติ', 0, 0, '1', 'ผู้ตรวจสอบ', 'สุเมธ', '2016-12-18 20:32:19', NULL, '2016-12-18 20:32:19'),
+(4, '12345bkb', 129, NULL, 'ok', 'อนุมัติ', 2000000, 10000, '10', 'ผู้อนุมัติ', 'สุเมธ', '2016-12-18 20:34:39', NULL, '2016-12-18 20:34:39'),
+(5, '12345bkb', 129, NULL, '', 'อนุมัติ', 0, 0, '1', 'ผู้ตรวจสอบ', 'สุเมธ', '2016-12-18 20:37:45', NULL, '2016-12-18 20:37:45'),
+(6, '12345bkb', 129, NULL, '', 'อนุมัติ', 0, 0, '1', 'ผู้ตรวจสอบ', 'สุเมธ', '2016-12-18 20:38:03', NULL, '2016-12-18 20:38:03'),
+(7, '12345bkb', 129, NULL, '', 'อนุมัติ', 0, 0, '1', 'ผู้ตรวจสอบ', 'สุเมธ', '2016-12-18 20:39:11', NULL, '2016-12-18 20:39:11'),
+(8, '12345bkb', 129, NULL, '', 'อนุมัติ', 0, 0, '1', 'ผู้ตรวจสอบ', 'สุเมธ', '2016-12-18 20:39:16', NULL, '2016-12-18 20:39:16'),
+(9, '12345bkb', 129, NULL, '', 'อนุมัติ', 0, 0, '1', 'ผู้ตรวจสอบ', 'สุเมธ', '2016-12-18 20:41:11', NULL, '2016-12-18 20:41:11'),
+(10, '12345bkb', 129, NULL, '', 'อนุมัติ', 0, 0, '1', 'ผู้ตรวจสอบ', 'สุเมธ', '2016-12-18 20:44:43', NULL, '2016-12-18 20:44:43'),
+(11, '12345bkb', 129, NULL, '', 'อนุมัติ', 0, 0, '1', 'ผู้ตรวจสอบ', 'สุเมธ', '2016-12-18 20:49:42', NULL, '2016-12-18 20:49:42'),
+(12, '12345bkb', 129, NULL, '', 'อนุมัติ', 0, 0, '1', 'ผู้ตรวจสอบ', 'สุเมธ', '2016-12-18 20:54:58', NULL, '2016-12-18 20:54:58'),
+(13, '12345bkb', 129, NULL, '', 'อนุมัติ', 0, 0, '1', 'ผู้ตรวจสอบ', 'สุเมธ', '2016-12-18 20:55:47', NULL, '2016-12-18 20:55:47'),
+(14, '12345bkb', 129, NULL, '', 'อนุมัติ', 0, 0, '1', 'ผู้ตรวจสอบ', 'สุเมธ', '2016-12-18 20:58:11', NULL, '2016-12-18 20:58:11'),
+(15, '12345bkb', 129, NULL, '', 'อนุมัติ', 0, 0, '1', 'ผู้ตรวจสอบ', 'สุเมธ', '2016-12-18 20:59:12', NULL, '2016-12-18 20:59:12'),
+(16, '12345bkb', 129, NULL, '', 'อนุมัติ', 0, 0, '1', 'ผู้ตรวจสอบ', 'สุเมธ', '2016-12-18 21:00:48', NULL, '2016-12-18 21:00:48'),
+(17, '12345bkb', 129, NULL, '', 'อนุมัติ', 0, 0, '1', 'ผู้ตรวจสอบ', 'สุเมธ', '2016-12-18 21:02:00', NULL, '2016-12-18 21:02:00'),
+(18, '12345bkb', 129, NULL, '', 'อนุมัติ', 0, 0, '1', 'ผู้ตรวจสอบ', 'สุเมธ', '2016-12-18 21:02:29', NULL, '2016-12-18 21:02:29');
 
 -- --------------------------------------------------------
 
@@ -133,9 +143,8 @@ CREATE TABLE `tbl_requestloan` (
 --
 
 INSERT INTO `tbl_requestloan` (`loan_id`, `loanreq_id`, `citizen_id`, `title_type`, `firstname`, `lastname`, `birthdate`, `age`, `nationality`, `statustype`, `mobile`, `email`, `addressregistration`, `addresscurrent`, `addresssenddoc`, `jobtype`, `hometype`, `tradingprice`, `creditloan`, `lncome_per_month`, `periodloan`, `netprofit`, `copyidcard`, `copylicenses`, `copydocumenthome`, `copymarriage`, `copy_rename`, `salary_slip`, `copy_bankaccount`, `loanstatustype`, `createby`, `created`, `updateby`, `updated`) VALUES
-(27, 16, '1409800246487', 'นาย', ' สุเมธ', ' แก่นแก้ว', ' 2016-11-10', 22, ' ไทย', ' หย่าหร้าง', ' 083333333', ' sumet@hotmail.com', ' มหาสารคาม', '  มหาสารคาม', '  มหาสารคาม', ' โปรแกรมเมอร์', ' สินเชื่อบ้านเดี่ยว', 199999999, 2342342342, 25, 500000000, 500000000, ' a.png', ' b.png', ' c.jpeg', ' d.png', ' e.png', ' images.jpeg', ' uu.jpg', 'รออนุมัติ', ' สุเมธ', '2016-12-06 10:59:28', ' สุเมธ', '2016-12-06 10:59:28'),
-(28, 16, '1409800246487', 'นาย', ' สุเมธ', ' แก่นแก้ว', ' 2016-11-10', 22, ' ไทย', ' หย่าหร้าง', ' 083333333', ' sumet@hotmail.com', ' มหาสารคาม', '  มหาสารคาม', '  มหาสารคาม', ' โปรแกรมเมอร์', ' สินเชื่อบ้านเดี่ยว', 199999999, 2342342342, 25, 500000000, 500000000, ' a.png', ' b.png', ' c.jpeg', ' d.png', ' e.png', ' images.jpeg', ' uu.jpg', 'รออนุมัติ', ' สุเมธ', '2016-12-06 11:09:02', ' สุเมธ', '2016-12-06 11:09:02'),
-(29, 16, '1409800246487', 'นาย', ' สุเมธ', ' แก่นแก้ว', ' 2016-11-10', 22, ' ไทย', ' หย่าหร้าง', ' 083333333', ' sumet@hotmail.com', ' มหาสารคาม', '  มหาสารคาม', '  มหาสารคาม', ' โปรแกรมเมอร์', ' สินเชื่อบ้านเดี่ยว', 199999999, 2342342342, 25, 500000000, 500000000, ' a.png', ' b.png', ' c.jpeg', ' d.png', ' e.png', ' images.jpeg', ' uu.jpg', 'รออนุมัติ', ' สุเมธ', '2016-12-06 11:12:34', ' สุเมธ', '2016-12-06 11:12:34');
+(42, 129, '140980024', 'นางสาว', 'สุเมธ', 'แก่นแก้ว', '2016-11-10', 22, 'thai', 'หย่าหร้าง', '083333333', 'sumet@hotmail.com', 'มหาสารคามaaaasdfsd', '  sdมหาสารคามssss', '  มหาสารคามsss', 'programmer', 'สินเชื่อทาวน์เฮาส์', 9000000, 9000000, 10, 9000000, 9000000, '190-132-camera-ready.pdf', '190-132-camera-ready.pdf', '190-132-camera-ready.pdf', '190-132-camera-ready.pdf', '190-132-camera-ready.pdf', '190-132-camera-ready.pdf', '190-132-camera-ready.pdf', 'รออนุมัติ', 'สุเมธsdsd', '2016-12-17 16:17:03', 'สุเมธsdsd', '2016-12-17 16:17:03'),
+(43, 128, '140980024', 'นางสาว', 'สุเมธ', 'แก่นแก้ว', '2016-11-10', 22, 'thai', 'หย่าหร้าง', '083333333', 'sumet@hotmail.com', 'มหาสารคามaaaasdfsd', '  sdมหาสารคามssss', '  มหาสารคามsss', 'programmer', 'สินเชื่อทาวน์เฮาส์', 9000000, 9000000, 10, 9000000, 9000000, '190-132-camera-ready.pdf', '190-132-camera-ready.pdf', '190-132-camera-ready.pdf', '190-132-camera-ready.pdf', '190-132-camera-ready.pdf', '190-132-camera-ready.pdf', '190-132-camera-ready.pdf', 'รออนุมัติ', 'สุเมธsdsd', '2016-12-17 16:30:37', 'สุเมธsdsd', '2016-12-17 16:30:37');
 
 -- --------------------------------------------------------
 
@@ -271,12 +280,6 @@ ALTER TABLE `tbl_approveloan`
   ADD PRIMARY KEY (`approve_id`);
 
 --
--- Indexes for table `tbl_bankrequest`
---
-ALTER TABLE `tbl_bankrequest`
-  ADD PRIMARY KEY (`loanbankreq_id`);
-
---
 -- Indexes for table `tbl_main_menu`
 --
 ALTER TABLE `tbl_main_menu`
@@ -321,12 +324,7 @@ ALTER TABLE `tbl_user`
 -- AUTO_INCREMENT for table `tbl_approveloan`
 --
 ALTER TABLE `tbl_approveloan`
-  MODIFY `approve_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `tbl_bankrequest`
---
-ALTER TABLE `tbl_bankrequest`
-  MODIFY `loanbankreq_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT 'รหัสธนาคาร';
+  MODIFY `approve_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT 'รหัสอนุมัติ', AUTO_INCREMENT=19;
 --
 -- AUTO_INCREMENT for table `tbl_main_menu`
 --
@@ -336,7 +334,7 @@ ALTER TABLE `tbl_main_menu`
 -- AUTO_INCREMENT for table `tbl_requestloan`
 --
 ALTER TABLE `tbl_requestloan`
-  MODIFY `loan_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `loan_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
 --
 -- AUTO_INCREMENT for table `tbl_role`
 --
