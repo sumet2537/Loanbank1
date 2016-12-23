@@ -58,54 +58,6 @@ public class LoanRequstAction extends DispatchAction {
         loanbean.setLncome_per_month(loanform.getLncome_per_month());
         loanbean.setPeriodloan(loanform.getPeriodloan());
         loanbean.setNetprofit(loanform.getNetprofit());
-//        
-//        
-//        FileUploadUtil upload = new FileUploadUtil();
-//       FileOutputStream outputStream = null;
-//        FormFile file = null;
-//        String file1 = loanform.getCopyidcard().getFileName();
-//        if (file1.equals("")) {
-//            loanbean.setCopyidcard("nofile");
-//        } else {
-//       loanbean.setCopyidcard(upload.fileinputStream(loanform.getCopyidcard()));
-//        }
-//        String file2 = loanform.getCopylicenses().getFileName();
-//       if(file2.equals("")){
-//           loanbean.setCopylicenses("nofile");
-//       }else{
-//       loanbean.setCopylicenses(upload.fileinputStream(loanform.getCopylicenses()));
-//       }
-//          String file3 = loanform.getCopydocumenthome().getFileName();
-//       if(file3.equals("")){
-//           loanbean.setCopydocumenthome("nofile");
-//       }else{
-//       loanbean.setCopydocumenthome(upload.fileinputStream(loanform.getCopydocumenthome()));
-//       }
-//          String file4 = loanform.getCopymarriage().getFileName();
-//       if(file4.equals("")){
-//           loanbean.setCopymarriage("nofile");
-//       }else{
-//       loanbean.setCopymarriage(upload.fileinputStream(loanform.getCopymarriage()));
-//       }
-//            String file5 = loanform.getCopy_rename().getFileName();
-//       if(file5.equals("")){
-//           loanbean.setCopy_rename("nofile");
-//       }else{
-//       loanbean.setCopy_rename(upload.fileinputStream(loanform.getCopy_rename()));
-//       }
-//            String file6 = loanform.getSalary_slip().getFileName();
-//       if(file6.equals("")){
-//           loanbean.setSalary_slip("nofile");
-//       }else{
-//       loanbean.setSalary_slip(upload.fileinputStream(loanform.getSalary_slip()));
-//       }
-//            String file7 = loanform.getCopy_bankaccount().getFileName();
-//       if(file7.equals("")){
-//           loanbean.setCopy_bankaccount("nofile");
-//       }else{
-//       loanbean.setCopy_bankaccount(upload.fileinputStream(loanform.getCopy_bankaccount()));
-//       }
-//        System.out.println("++++++++++++"+loanform.getCopyidcard().getFileName());
 
         loanbean.setCopyidcard(loanform.getCopyidcard());
         loanbean.setCopylicenses(loanform.getCopylicenses());
@@ -116,8 +68,8 @@ public class LoanRequstAction extends DispatchAction {
         loanbean.setCopy_bankaccount(loanform.getCopy_bankaccount());
         
           //=============================================คุ๋สมรส==========================================================================================
-//        String statustype = loanform.getStatustype();
-//        if (statustype.equals("สมรส")) {
+        String statustype = loanform.getStatustype();
+        if (statustype.equals("สมรส")) {
             loanbean.setCitizen_p(loanform.getCitizen_p());
             loanbean.setTitle_p(loanform.getTitle_p());
             loanbean.setFirstname_p(loanform.getFirstname_p());
@@ -141,38 +93,10 @@ public class LoanRequstAction extends DispatchAction {
             loanbean.setSalary_slip_p(loanform.getSalary_slip_p());
             loanbean.setCopy_bankaccount_p(loanform.getCopy_bankaccount_p());
 
-//            String file8 = loanform.getCopyidcard_p();
-//            if (file8.equals("")) {
-//                loanbean.setCopyidcardP(loan.getCopyidcard_p());
-//            } else {
-//                loanbean.setCopyidcardP(file8);
-//                loanbean.setCopyidcardPbyte(upload.fileToByteArray(file8));
-//            }
-//
-//            String file9 = loanform.getCopydocumenthome_p();
-//            if (file9.equals("")) {
-//                loanbean.setCopydocumenthomeP(loan.getCopydocumenthome_p());
-//            } else {
-//                loanbean.setCopydocumenthomeP(file9);
-//                loanbean.setCopydocumenthomePbyte(upload.fileToByteArray(file9));
-//            }
-//            String file10 = loanform.getSalary_slip_p();
-//            if (file10.equals("")) {
-//                loanbean.setSalarySlipP(loan.getSalary_slip_p());
-//            } else {
-//                loanbean.setSalarySlipP(file10);
-//                loanbean.setSalarySlipPbyte(upload.fileToByteArray(file10));
-//            }
-//            String file11 = loanform.getCopy_bankaccount_p();
-//            if (file11.equals("")) {
-//                loanbean.setCopyBankaccountP(loan.getCopy_bankaccount_p());
-//            } else {
-//                loanbean.setCopyBankaccountP(file11);
-//                loanbean.setCopyBankaccountPbyte(upload.fileToByteArray(file11));
-//            }
-
-//        } else {
-//        }
+        } else {
+        }
+            loanbean.setPeriodloan_p(loanform.getPeriodloan_p());
+            loanbean.setNetprofit_p(loanform.getNetprofit_p());
 //==================================================ผู้ค้ำประกัน=====================================================================================
 
         loanbean.setCitizen_k(loanform.getCitizen_k());
@@ -198,35 +122,7 @@ public class LoanRequstAction extends DispatchAction {
         loanbean.setSalary_slip_k(loanform.getSalary_slip_k());
         loanbean.setCopy_bankaccount_k(loanform.getCopy_bankaccount_k());
 
-//        String file12 = loanform.getCopyidcard_k();
-//            if (file12.equals("")) {
-//                loanbean.setCopyidcardK(loan.getCopyidcard_k());
-//            } else {
-//                loanbean.setCopyidcardK(file12);
-//                loanbean.setCopyidcardKv(upload.fileToByteArray(file12));
-//            }
-//
-//            String file13 = loanform.getCopydocumenthome_k();
-//            if (file13.equals("")) {
-//                loanbean.setCopydocumenthomeK(loan.getCopydocumenthome_p());
-//            } else {
-//                loanbean.setCopydocumenthomeK(file13);
-//                loanbean.setCopydocumenthomeKv(upload.fileToByteArray(file13));
-//            }
-//            String file14 = loanform.getSalary_slip_k();
-//            if (file14.equals("")) {
-//                loanbean.setSalarySlipK(loan.getSalary_slip_p());
-//            } else {
-//                loanbean.setSalarySlipP(file14);
-//                loanbean.setSalarySlipKbyte(upload.fileToByteArray(file14));
-//            }
-//            String file15 = loanform.getCopy_bankaccount_p();
-//            if (file15.equals("")) {
-//                loanbean.setCopyBankaccountK(loan.getCopy_bankaccount_k());
-//            } else {
-//                loanbean.setCopyBankaccountK(file15);
-//                loanbean.setCopyBankaccountKbyte(upload.fileToByteArray(file15));
-//            }
+
 //=======================================================================================================================================
         loanbean.setLoanstatustype(loanform.getLoanstatustype());
         loanbean.setCreateby(loanform.getCreateby());

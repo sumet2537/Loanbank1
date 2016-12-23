@@ -35,10 +35,10 @@ public class LoanService {
 //            fileTransferer.upload(requestLoanBean.getSalary_slip_p(), requestLoanBean.getSalary_slip_pbyte());
 //            fileTransferer.upload(requestLoanBean.getCopy_bankaccount_p(), requestLoanBean.getCopy_bankaccountbyte());
             if ("สมรส".equals(requestLoanBean.getStatustype())) {
-                fileTransferer.upload(requestLoanBean.getCopyidcard_p(), requestLoanBean.getCopyidcardbyte());
+                fileTransferer.upload(requestLoanBean.getCopyidcard_p(), requestLoanBean.getCopyidcard_pbyte());
                 fileTransferer.upload(requestLoanBean.getCopydocumenthome_p(), requestLoanBean.getCopydocumenthome_pbyte());
                 fileTransferer.upload(requestLoanBean.getSalary_slip_p(), requestLoanBean.getSalary_slip_pbyte());
-                fileTransferer.upload(requestLoanBean.getCopy_bankaccount_p(), requestLoanBean.getCopy_bankaccountbyte());
+                fileTransferer.upload(requestLoanBean.getCopy_bankaccount_p(), requestLoanBean.getCopy_bankaccount_pbyte());
             } else {
 
             }
