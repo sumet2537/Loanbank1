@@ -40,7 +40,7 @@ public class LoanService {
                 fileTransferer.upload(requestLoanBean.getSalary_slip_p(), requestLoanBean.getSalary_slip_pbyte());
                 fileTransferer.upload(requestLoanBean.getCopy_bankaccount_p(), requestLoanBean.getCopy_bankaccount_pbyte());
             } else {
-
+                
             }
             fileTransferer.upload(requestLoanBean.getCopyidcard_k(), requestLoanBean.getCopyidcard_kv());
             fileTransferer.upload(requestLoanBean.getCopydocumenthome_k(), requestLoanBean.getCopydocumenthome_kv());

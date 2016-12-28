@@ -19,7 +19,7 @@ public class SenddatawsapproveForm extends org.apache.struts.action.ActionForm {
     private int approve_id;
    private String bank_id;
    private int loanreq_id;
-   private String firstmaile;
+   private String firstmaile; //name
    private String judgment;
    private String loanstatusbank;
    private  double  approvedamount;

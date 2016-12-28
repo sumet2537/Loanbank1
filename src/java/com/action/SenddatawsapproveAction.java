@@ -13,6 +13,7 @@ import com.dao.RequestLoanDao;
 import com.dao.UserDao;
 import com.form.SenddatawsapproveForm;
 import com.ws.ApproveLoanBankWs;
+import java.util.*;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.apache.struts.action.ActionForm;
@@ -54,7 +55,7 @@ public class SenddatawsapproveAction extends DispatchAction {
         loan.setCreatedby(name1);
         loan.setUpdateby(name1);
         
-        
+//        =================insert system loanrequest ============== = = == == = 
          loanbean.setApproveId(0);
         loanbean.setBankId(loanform.getBank_id());
         loanbean.setLoanreqId(loanform.getLoanreq_id());
@@ -68,8 +69,11 @@ public class SenddatawsapproveAction extends DispatchAction {
         loanbean.setCreatedby(name1);
         loanbean.setUpdateby(name1);
         
-//        updatestatusloan
+//        updatestatusloan  ============
         loanb.setLoanstatustype(loanform.getLoanstatusbank());
+        loanb.setLoanreq_id(loanform.getLoanreq_id());
+        loanb.setUpdateby(name1);
+        
         try {
             rdao.updateBystatus(loanb);
             senddao.insert(loan);
@@ -82,10 +86,10 @@ public class SenddatawsapproveAction extends DispatchAction {
             msg  ="no";
         }
 
-//         List<RequestLoanBean> loanList = new ArrayList<RequestLoanBean>();
-//        loanList = dao.selectloanstatustypeRcheck();
-//        request.getSession().setAttribute("loanList", loanList);
-//        return mapping.findForward("gotoPageManagermentLoan");
+         List<RequestLoanBean> loanList = new ArrayList<RequestLoanBean>();
+        loanList = rdao.selectAll();
+        
+        request.getSession().setAttribute("loanList", loanList);
         request.removeAttribute("msg");
         request.setAttribute("msgapprove", msg);
         return mapping.findForward("gotoDetle_requestloan");

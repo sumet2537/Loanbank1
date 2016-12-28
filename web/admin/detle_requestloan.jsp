@@ -165,14 +165,14 @@
                                                                     <label >สำเนาบัตรประจำตัวประชาชน: &nbsp;&nbsp;<span style="color:#0033FF; font-size: 17px;"><%=bean.getCopyidcard()%></span></label>
                                                                     <input  type="hidden" name="copyidcard" value="<%=bean.getCopyidcard()%>">
                                                                 </div>
-                                                                <div class="col-md-4"><a  href="http://localhost:8080/TestProject/image/uploade/<%=bean.getCopyidcard()%>"><img class="imgfile" src="./img/pdf-icon.jpg"></a></div>
+                                                                <div class="col-md-4"><a  href="http://localhost:8080/TestProject/image/uploade/<%=bean.getCopyidcard()%>" target="_blank"><img class="imgfile" src="./img/icon-pdf1.png"></a></div>
                                                             </div>
                                                             <div class="form-group"> 
                                                                 <div class="col-md-8">
                                                                     <label>สำเนาใบอนุญาตประกอบวิชาชีพ (กรณีประกอบวิชาชีพเฉพาะ) : &nbsp;&nbsp;<span style="color:#0033FF; font-size: 17px;"><%=bean.getCopylicenses()%></span></label>
                                                                     <input type="hidden" name="copylicenses" value="<%=bean.getCopylicenses()%>">
                                                                 </div>
-                                                                <div class="col-md-4"><a  href="http://localhost:8080/TestProject/image/uploade/<%=bean.getCopylicenses()%>"><img class="imgfile" src="./img/pdf-icon.jpg"></a></div>
+                                                                <div class="col-md-4"><a  href="http://localhost:8080/TestProject/image/uploade/<%=bean.getCopylicenses()%>" target="_blank"><img class="imgfile" src="./img/icon-pdf1.png"></a></div>
 
                                                             </div>
                                                             <div class="form-group">
@@ -180,35 +180,35 @@
                                                                     <label>สำเนาทะเบียนบ้าน :<span style="color:#0033FF; font-size: 17px;"><%=bean.getCopydocumenthome()%></span></label>
                                                                     <input type="hidden" name="copydocumenthome" value="<%=bean.getCopydocumenthome()%>">
                                                                 </div>
-                                                                <div class="col-md-4"><a  href="http://localhost:8080/TestProject/image/uploade/<%=bean.getCopydocumenthome()%>"><img class="imgfile" src="./img/pdf-icon.jpg"></a></div>
+                                                                <div class="col-md-4"><a  href="http://localhost:8080/TestProject/image/uploade/<%=bean.getCopydocumenthome()%>" target="_blank"><img class="imgfile" src="./img/icon-pdf1.png"></a></div>
                                                             </div>
                                                             <div class="form-group">
                                                                 <div class=" col-md-8">
                                                                     <label>สำเนาทะเบียนสมรส/ใบหย่า/ใบมรณะบัตรของคู่สมรส (ถ้ามี) : &nbsp;&nbsp;<span style="color:#0033FF; font-size: 17px;"><%=bean.getCopymarriage()%></span></label>
                                                                     <input type="hidden" name="copymarriage" value="<%=bean.getCopymarriage()%>">
                                                                 </div>
-                                                                <div class="col-md-4"><a  href="http://localhost:8080/TestProject/image/uploade/<%=bean.getCopymarriage()%>"><img class="imgfile" src="./img/pdf-icon.jpg"></a></div>
+                                                                <div class="col-md-4"><a  href="http://localhost:8080/TestProject/image/uploade/<%=bean.getCopymarriage()%>" target="_blank"><img class="imgfile" src="./img/icon-pdf1.png"></a></div>
                                                             </div>
                                                             <div class="form-group">
                                                                 <div class=" col-md-8">
                                                                     <label >ใบเปลี่ยนชื่อ-สกุล (ทุกใบ): &nbsp;&nbsp;<span style="color:#0033FF; font-size: 17px;"><%=bean.getCopy_rename()%></span></label>
                                                                     <input  type="hidden"  name="copy_rename" value="<%=bean.getCopy_rename()%>">
                                                                 </div>
-                                                                <div class="col-md-4"><a  href="http://localhost:8080/TestProject/image/uploade/<%=bean.getCopy_rename()%>"><img class="imgfile" src="./img/pdf-icon.jpg"></a></div>
+                                                                <div class="col-md-4"><a  href="http://localhost:8080/TestProject/image/uploade/<%=bean.getCopy_rename()%>" target="_blank"><img class="imgfile" src="./img/icon-pdf1.png"></a></div>
                                                             </div>
                                                             <div class="form-group">
                                                                 <div class=" col-md-8">
                                                                     <label>สลิปเงินเดือน : &nbsp;&nbsp;<span style="color:#0033FF; font-size: 17px;"><%=bean.getSalary_slip()%></span></label>
                                                                     <input  type="hidden" name="salary_slip"  value="<%=bean.getSalary_slip()%>">
                                                                 </div>
-                                                                <div class="col-md-4"><a  href="http://localhost:8080/TestProject/image/uploade/<%=bean.getSalary_slip()%>"><img class="imgfile" src="./img/pdf-icon.jpg"></a></div>
+                                                                <div class="col-md-4"><a  href="http://localhost:8080/TestProject/image/uploade/<%=bean.getSalary_slip()%>" target="_blank"><img class="imgfile" src="./img/icon-pdf1.png"></a></div>
                                                             </div>
                                                             <div class="form-group">
                                                                 <div class=" col-md-8">
                                                                     <label>สำเนาบัญชีธนาคาร : &nbsp;&nbsp;<span style="color:#0033FF; font-size: 17px;"><%=bean.getCopy_bankaccount()%></span></label>
                                                                     <input type="hidden" name="copy_bankaccount"  value="<%=bean.getCopy_bankaccount()%>">
                                                                 </div>
-                                                                <div class="col-md-4"><a  href="http://localhost:8080/TestProject/image/uploade/<%=bean.getCopy_bankaccount()%>"><img class="imgfile" src="./img/pdf-icon.jpg"></a></div>
+                                                                <div class="col-md-4"><a  href="http://localhost:8080/TestProject/image/uploade/<%=bean.getCopy_bankaccount()%>" target="_blank"><img class="imgfile" src="./img/icon-pdf1.png"></a></div>
                                                             </div>
                                                         </div>
 
@@ -281,7 +281,8 @@
                                                                     <label>ที่อยู่  <span style="color:#0033FF; font-size: 17px;"><%=bean.getAddress_p()%></span></label>
                                                                     <textarea hidden name="addresssenddoc"> <%=bean.getAddress_p()%></textarea>
                                                                 </div>
-                                                                <h4> :: ข้อมูลด้านรายได้ ::</h4>
+                                                                <div class="col-md-12"><h4> :: ข้อมูลด้านรายได้ ::</h4></div>
+                                                                
                                                                 <div class="form-group col-md-6">
                                                                     <label>รายได้ประจำต่อเดือน: &nbsp;&nbsp; <span style="color:#0033FF; font-size: 17px;"><%=formatter.format(bean.getPeriodloan_p())%>&nbsp;&nbsp;</span>บาท</label>
                                                                     <input  class="form-control" type="hidden" name="periodloan" value="<%=bean.getPeriodloan_p()%>">
@@ -290,7 +291,8 @@
                                                                     <label>รายได้เสริมทั้งหมดเฉลี่ยต่อเดือน : &nbsp;&nbsp;<span style="color:#0033FF; font-size: 17px;"><%=formatter.format(bean.getNetprofit_p())%>&nbsp;&nbsp;</span>บาท</label>
                                                                     <input type="hidden" name="netprofit" value="<%=bean.getNetprofit_p()%>">
                                                                 </div>
-                                                                <h4> :: เอกสารประกอบการขอกู้ ::</h4>
+                                                                <div class="col-md-12"><h4> :: เอกสารประกอบการขอกู้ ::</h4></div>
+                                                                
                                                                 <div class="form-group">
                                                                     <div class="col-md-8"><h3>เอกสาร</h3>
                                                                     </div>
@@ -315,14 +317,14 @@
                                                                         <label>สลิปเงินเดือน : &nbsp;&nbsp;<span style="color:#0033FF; font-size: 17px;"><%=bean.getSalary_slip_p()%></span></label>
                                                                         <input  type="hidden" name="salary_slip"  value="<%=bean.getSalary_slip_p()%>">
                                                                     </div>
-                                                                    <div class="col-md-4"><a  href="http://localhost:8080/TestProject/image/uploade/<%=bean.getSalary_slip_p()%>"><img class="imgfile" src="./img/icon-pdf1.png"></a></div>
+                                                                    <div class="col-md-4"><a  href="http://localhost:8080/TestProject/image/uploade/<%=bean.getSalary_slip_p()%>" target="_blank"><img class="imgfile" src="./img/icon-pdf1.png"></a></div>
                                                                 </div>
                                                                 <div class="form-group">
                                                                     <div class=" col-md-8">
                                                                         <label>สำเนาบัญชีธนาคาร : &nbsp;&nbsp;<span style="color:#0033FF; font-size: 17px;"><%=bean.getCopy_bankaccount_p()%></span></label>
                                                                         <input type="hidden" name="copy_bankaccount"  value="<%=bean.getCopy_bankaccount_p()%>">
                                                                     </div>
-                                                                    <div class="col-md-4"><a  href="http://localhost:8080/TestProject/image/uploade/<%=bean.getCopy_bankaccount_p()%>"><img class="imgfile" src="./img/icon-pdf1.png"></a></div>
+                                                                    <div class="col-md-4"><a  href="http://localhost:8080/TestProject/image/uploade/<%=bean.getCopy_bankaccount_p()%>" target="_blank"><img class="imgfile" src="./img/icon-pdf1.png"></a></div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -399,7 +401,8 @@
                                                                     <label>ที่อยู่  <span style="color:#0033FF; font-size: 17px;"><%=bean.getAddress_k()%></span></label>
                                                                     <textarea hidden name="addresssenddoc"> <%=bean.getAddress_k()%></textarea>
                                                                 </div>
-                                                                <h4> :: ข้อมูลด้านรายได้ ::</h4>
+                                                                <div class="col-md-12"> <h4> :: ข้อมูลด้านรายได้ ::</h4></div>
+                                                               
                                                                 <div class="form-group col-md-6">
                                                                     <label>รายได้ประจำต่อเดือน: &nbsp;&nbsp; <span style="color:#0033FF; font-size: 17px;"><%=formatter.format(bean.getPeriodloan_k())%>&nbsp;&nbsp;</span>บาท</label>
                                                                     <input  class="form-control" type="hidden" name="periodloan" value="<%=bean.getPeriodloan_k()%>">
@@ -408,11 +411,13 @@
                                                                     <label>รายได้เสริมทั้งหมดเฉลี่ยต่อเดือน : &nbsp;&nbsp;<span style="color:#0033FF; font-size: 17px;"><%=formatter.format(bean.getNetprofit_k())%>&nbsp;&nbsp;</span>บาท</label>
                                                                     <input type="hidden" name="netprofit" value="<%=bean.getNetprofit_k()%>">
                                                                 </div>
+                                                                <div class="col-md-12">
                                                                 <h4> :: เอกสารประกอบการขอกู้ ::</h4>
+                                                                </div>
                                                                 <div class="form-group">
-                                                                    <div class="col-md-8"><h3>เอกสาร</h3>
+                                                                    <div class="col-md-8"><h4>เอกสาร</h4>
                                                                     </div>
-                                                                    <div class="col-md-4"><h3>ดูรายละเอียด</h3></div>
+                                                                    <div class="col-md-4"><h4>ดูรายละเอียด</h4></div>
                                                                 </div>
                                                                 <div class="form-group">
                                                                     <div class="col-md-8">
@@ -433,14 +438,14 @@
                                                                         <label>สลิปเงินเดือน : &nbsp;&nbsp;<span style="color:#0033FF; font-size: 17px;"><%=bean.getSalary_slip_k()%></span></label>
                                                                         <input  type="hidden" name="salary_slip"  value="<%=bean.getSalary_slip_k()%>">
                                                                     </div>
-                                                                    <div class="col-md-4"><a  href="http://localhost:8080/TestProject/image/uploade/<%=bean.getSalary_slip_k()%>"><img class="imgfile" src="./img/icon-pdf1.png"></a></div>
+                                                                    <div class="col-md-4"><a  href="http://localhost:8080/TestProject/image/uploade/<%=bean.getSalary_slip_k()%>" target="_blank"><img class="imgfile" src="./img/icon-pdf1.png"></a></div>
                                                                 </div>
                                                                 <div class="form-group">
                                                                     <div class=" col-md-8">
                                                                         <label>สำเนาบัญชีธนาคาร : &nbsp;&nbsp;<span style="color:#0033FF; font-size: 17px;"><%=bean.getCopy_bankaccount_k()%></span></label>
                                                                         <input type="hidden" name="copy_bankaccount"  value="<%=bean.getCopy_bankaccount_k()%>">
                                                                     </div>
-                                                                    <div class="col-md-4"><a  href="http://localhost:8080/TestProject/image/uploade/<%=bean.getCopy_bankaccount_k()%>"><img class="imgfile" src="./img/icon-pdf1.png"></a></div>
+                                                                    <div class="col-md-4"><a  href="http://localhost:8080/TestProject/image/uploade/<%=bean.getCopy_bankaccount_k()%>" target="_blank"><img class="imgfile" src="./img/icon-pdf1.png"></a></div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -489,7 +494,7 @@
                                         <div class="input-group">
                                             <input name="checkburo" type="text" value="<%=bean.getCitizen_id()%>" class="form-control">
                                             <span class="input-group-btn">
-                                                <button type="submit" onclick="oncheckburo('checkburo')" class="btn btn-twitter"><i class="glyphicon glyphicon-search"></i> </button>
+                                                <button type="button" onclick="oncheckburo('checkburo')" class="btn btn-twitter"><i class="glyphicon glyphicon-search"></i> </button>
                                             </span>
                                         </div>
                                     </div>
@@ -515,15 +520,6 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-md-4 control-label">เลขบัตรประชาชนผู้กู้ <span class="star">*</span></label>  
-                                <div class="col-md-6 inputGroupContainer">
-                                    <div class="input-group">
-                                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                        <input  name="firstname" value="<%=bean.getCitizen_id()%>" readonly="" class="form-control"  type="text"  >
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group">
                                 <label class="col-md-4 control-label">ผลการพิจารณา <span class="star">*</span></label>  
                                 <div class="col-md-6 inputGroupContainer">
                                     <div class="input-group">
@@ -545,28 +541,45 @@
                                     </div>
                                 </div>
                             </div>
-
+ <div class="form-group">
+                                <label class="col-md-4 control-label">วงเงินที่ขอ <span class="star">*</span></label>  
+                                <div class="col-md-4 inputGroupContainer">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-bitcoin"></i></span>
+                                        <input  value="<%=formatter.format(bean.getCreditloan())%>" readonly="" class="form-control" type="text" />
+                                    </div>
+                                </div>บาท
+                            </div>
                             <div class="form-group">
                                 <label class="col-md-4 control-label">กรอกวงเงินอนุมัติ <span class="star">*</span></label>  
-                                <div class="col-md-6 inputGroupContainer">
+                                <div class="col-md-4 inputGroupContainer">
                                     <div class="input-group">
                                         <span class="input-group-addon"><i class="glyphicon glyphicon-bitcoin"></i></span>
                                         <input name="approvedamount" placeholder="กรอกวงเงินอนุมัติ" class="form-control" type="text" >
                                     </div>
-                                </div>
+                                </div>บาท
                             </div>
                             <div class="form-group">
                                 <label class="col-md-4 control-label">ยอดผ่อนชำระต่อเดือน <span class="star">*</span></label>  
-                                <div class="col-md-6 inputGroupContainer">
+                                <div class="col-md-4 inputGroupContainer">
                                     <div class="input-group">
                                         <span class="input-group-addon"><i class="glyphicon glyphicon-bitcoin"></i></span>
                                         <input name="installlments" placeholder="กรุณาใส่ยอดผ่อนชำระต่อเดือน" class="form-control"  type="text">
                                     </div>
-                                </div>
+                                </div>บาท
+                            </div>
+                                    <div class="form-group">
+                                <label class="col-md-4 control-label">ระยะเวลาขอผ่อนชำระ <span class="star">*</span></label>  
+                                <div class="col-md-4 inputGroupContainer">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-bitcoin"></i></span>
+                                        <input  value="<%=bean.getLncome_per_month()%>" class="form-control"  readonly="" type="text"/>
+                                    </div>
+                                </div>ปี
                             </div>
                             <div class="form-group">
-                                <label class="col-md-4 control-label">ระยะเวลาการผ่อน <span class="star">*</span></label>  
-                                <div class="col-md-6 inputGroupContainer">
+                                <label class="col-md-4 control-label">กรอกระยะเวลาการผ่อนชำระ <span class="star">*</span></label>  
+                                <div class="col-md-4 inputGroupContainer">
                                     <div class="input-group">
                                         <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
                                         <select  name="timerepayment" class="form-control">
@@ -580,7 +593,7 @@
                                             %>
                                         </select>
                                     </div>
-                                </div>
+                                </div>ปี
                             </div>
                             <div class="form-group">
                                 <label class="col-md-4 control-label">ตำแหน่งผู้อนุมัติ <span class="star">*</span></label>  
@@ -589,9 +602,8 @@
                                         <span class="input-group-addon"><i class="glyphicon glyphicon-education"></i></span>
 
                                         <select name="position"  class="form-control">
+                                            <option value="ผู้บริหารผ่านสินเชื่อ">ผู้บริหารผ่านสินเชื่อ</option>
                                             <option value="ผู้ตรวจสอบ">ผู้ตรวจสอบ</option>
-                                            <option value="ผัวหน้า">หัวหน้า</option>
-                                            <option value="ผู้อนุมัติ">ผู้อนุมัติ</option>
                                         </select>
                                     </div>
                                 </div>
@@ -637,7 +649,7 @@
                         type: "success"
                     },
                             function () {
-    //                                window.location.href = 'ApproveLoanAction.do?todo=gotoPageUserViewStatus';
+                                    window.location.href = 'PageAction.do?todo=gotoPageManagermentLoan';
                             });
                 });
             }

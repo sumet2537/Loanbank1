@@ -17,7 +17,7 @@ import javax.xml.ws.WebServiceFeature;
  * Generated source version: 2.2
  * 
  */
-@WebServiceClient(name = "ApproveClientWebService", targetNamespace = "http://ws.com/", wsdlLocation = "http://localhost:8080/TestProject/ApproveClientWebService?wsdl")
+@WebServiceClient(name = "ApproveClientWebService", targetNamespace = "http://ws.com/", wsdlLocation = "http://localhost:8080/TestProject/ApproveClientWebService?WSDL")
 public class ApproveClientWebService_Service
     extends Service
 {
@@ -30,7 +30,7 @@ public class ApproveClientWebService_Service
         URL url = null;
         WebServiceException e = null;
         try {
-            url = new URL("http://localhost:8080/TestProject/ApproveClientWebService?wsdl");
+            url = new URL("http://localhost:8080/TestProject/ApproveClientWebService?WSDL");
         } catch (MalformedURLException ex) {
             e = new WebServiceException(ex);
         }

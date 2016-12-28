@@ -7,6 +7,7 @@
 
 <struts-config>
     <form-beans>
+        <form-bean name="ApproveLoanForm" type="com.form.ApproveLoanForm"/>
         <form-bean name="SenddatawsapproveForm" type="com.form.SenddatawsapproveForm"/>
         <form-bean name="RequestLoanForm" type="com.form.RequestLoanForm"/>
         <form-bean name="registerForm" type="com.form.registerForm"/>
@@ -36,11 +37,10 @@
             <forward name="gotoPageHome" path="gotoPageHome"/>
             <forward name="gotoPageLogin" path="gotoPageLogin"/>
             <forward name="gotoPageProfile" path="gotoPageProfile"/>
-              <forward name="gotoPageLoanRequest" path="gotoPageLoanRequest"/>
-               <forward name="gotoPageDetleRequest" path="gotoPageDetleRequest"/>
-             <forward name="gotoPageAdminManagermentProfile" path="gotoPageAdminManagermentProfile"/>
-             <forward name="gotoPageAdminManagermentLoanrequest" path="gotoPageAdminManagermentLoanrequest"/>
              <forward name="gotoPageManagermentLoan" path="gotoPageManagermentLoan"/>
+             <forward name="gotoPageAdminManagermentLoanApprove" path="gotoPageAdminManagermentLoanApprove"/>
+             <forward name="gotoPageAdminManagermentLoanrequest" path="gotoPageAdminManagermentLoanrequest"/>
+          
              
         </action>
         <action name="AuthenAuthorizeForm" parameter="todo" path="/AuthenAuthorizeAction" scope="session" type="com.action.AuthenAuthorizeAction">
@@ -77,6 +77,10 @@
         <action name="SenddatawsapproveForm" parameter="todo" path="/SenddatawsapproveAction" scope="session" type="com.action.SenddatawsapproveAction">
         <forward name="gotoDetle_requestloan" path="gotoDetle_requestloan"/>
         </action>
+        <action name="ApproveLoanForm" parameter="todo" path="/ApproveLoanAction" scope="session" type="com.action.ApproveLoanAction">
+   <forward name="gotoPageAdminManagermentLoanApprove" path="gotoPageAdminManagermentLoanApprove"/>
+    <forward name="gotoDetle_ap" path="gotoDetle_ap"/>
+   </action>
     </action-mappings>
     
     <controller processorClass="org.apache.struts.tiles.TilesRequestProcessor"/>

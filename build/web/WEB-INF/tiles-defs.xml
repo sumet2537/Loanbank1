@@ -35,32 +35,23 @@
         <put name="title"  value="formregister" />
         <put name="body"   value="/jsp/register.jsp" />
     </definition>
-     <definition name="gotoPageLoanRequest" extends="welcome">
-        <put name="title"  value="formloanrequrst" />
-        <put name="body"   value="/user/loanrequst.jsp" />
-    </definition>
+
      <definition name="gotoPageDetleRequest" extends="welcome">
         <put name="title"  value="formdetlequrst" />
         <put name="body"   value="/jsp/detlereq.jsp" />
     </definition>
     
-      <definition name="gotorequestloansuccess" extends="welcome">   <!-- _____fยังไม่ทำ_____  -->
-        <put name="title"  value="loanrequstform" />
-        <put name="body"   value="/user/detlerequest.jsp" />
+      <definition name="gotoPageAdminManagermentLoanApprove" extends="welcome">
+        <put name="title"  value="" />
+        <put name="body"   value="/admin/AdminManagermantLoanApprove.jsp" />
     </definition>
-   
-      <definition name="gotoPageManagermentLoan" extends="welcome">
+     <definition name="gotoPageManagermentLoan" extends="welcome">  <!-- _____fยังไม่ทำ_____  -->
         <put name="title"  value="" />
         <put name="body"   value="/admin/AdminManagermentLoanrequest.jsp" />
     </definition>
-    
-      <definition name="gotoPageAdminManagermentProfile" extends="welcome">
+     <definition name="gotoDetle_ap" extends="welcome">  
         <put name="title"  value="" />
-        <put name="body"   value="/admin/AdminManagermantProfile.jsp" />
-    </definition>
-     <definition name="gotoPageAdminManagermentLoanrequest" extends="welcome">  <!-- _____fยังไม่ทำ_____  -->
-        <put name="title"  value="" />
-        <put name="body"   value="/admin/AdminManagermentLoanrequest.jsp" />
+        <put name="body"   value="/admin/checkApprove.jsp" />
     </definition>
     
     <definition name="gotoPageLogin" extends="welcome">

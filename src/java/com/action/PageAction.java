@@ -5,8 +5,11 @@
  */
 package com.action;
 
+import com.bean.ApproveLoanBean;
 import com.bean.RequestLoanBean;
+import com.bean.SenddatawsapproveBean;
 import com.bean.UserBean;
+import com.dao.ApproveLoanDao;
 import com.dao.RequestLoanDao;
 import com.dao.UserDao;
 import com.form.PageForm;
@@ -27,12 +30,7 @@ import org.apache.struts.action.ActionForward;
  */
 public class PageAction extends DispatchAction {
 
-    public ActionForward gotoPageBootstrapExample(ActionMapping mapping, ActionForm form,
-            HttpServletRequest request, HttpServletResponse response)
-            throws Exception {
-        return mapping.findForward("gotoPageBootstrapExample");
-
-    }
+  
 
     public ActionForward gotoPageRegister(ActionMapping mapping, ActionForm form,
             HttpServletRequest request, HttpServletResponse response)
@@ -99,44 +97,19 @@ public class PageAction extends DispatchAction {
         return mapping.findForward("gotoPageProfile");
     }
 
-    public ActionForward gotoPageBootstrapForm(ActionMapping mapping, ActionForm form,
+
+    //    ================================gotoPageAdminManagermen====================================
+    public ActionForward gotoPageAdminManagermentLoanApprove(ActionMapping mapping, ActionForm form,
             HttpServletRequest request, HttpServletResponse response)
             throws Exception {
+          PageForm pageForm = (PageForm) form;
+        List<SenddatawsapproveBean> loanList = new ArrayList<SenddatawsapproveBean>();
+        ApproveLoanDao dao = new ApproveLoanDao();
 
-        return mapping.findForward("gotoPageBootstrapForm");
-    }
-
-    //    ================================gotoPageAdminManagermentProfile====================================
-    public ActionForward gotoPageAdminManagermentProfile(ActionMapping mapping, ActionForm form,
-            HttpServletRequest request, HttpServletResponse response)
-            throws Exception {
-//         
-        List<UserBean> regisList = new ArrayList<UserBean>();
-        UserDao dao = new UserDao();
-
-        regisList = dao.selectAll();
-        request.getSession().setAttribute("regisList", regisList);
-
-        return mapping.findForward("gotoPageAdminManagermentProfile");
+        loanList = dao.selectAll();
+        request.getSession().setAttribute("loanList", loanList);
+        return mapping.findForward("gotoPageAdminManagermentLoanApprove");
 
     }
 
-    public ActionForward gotoPageLoanRequest(ActionMapping mapping, ActionForm form,
-            HttpServletRequest request, HttpServletResponse response)
-            throws Exception {
-        UserBean userBean = new UserBean();
-        userBean = (UserBean) request.getSession().getAttribute("userLogin");
-        String citizen_id = userBean.getCitizen_id();
-        UserDao dao = new UserDao();
-        userBean = dao.selectBycitizenid(citizen_id);
-        request.getSession().setAttribute("requestBean", userBean);
-        return mapping.findForward("gotoPageLoanRequest");
-    }
-
-    public ActionForward gotoPageDetleRequest(ActionMapping mapping, ActionForm form,
-            HttpServletRequest request, HttpServletResponse response)
-            throws Exception {
-        return mapping.findForward("gotoPageDetleRequest");
-
-    }
 }

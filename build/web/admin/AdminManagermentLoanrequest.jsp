@@ -101,41 +101,20 @@
                                                                     <td><%=bean.getMobile()%></td>
                                                                     <td><%=bean.getLoanstatustype()%></td>
                                                                     <td><%=formatter.format(bean.getCreditloan())%></td>
-                                                                     <td><%=bean.getProvince()%></td>
+                                                                    <td><%=bean.getProvince()%></td>
                                                                     <td><%=bean.getCreated()%></td>
-                                                                    <td> <button  onclick="callActionGotoDelete(<%=bean.getLoanreq_id()%>)" class="btn btn-sm btn-danger" ><i class="fa fa-close"></i></button></td>
-
+                                                                    <td> <button type="button" onclick="callActionGotoDelete('<%=bean.getLoanreq_id()%>')" class="btn btn-sm btn-danger" ><i class="fa fa-close"></i></button></td>
                                                                     <td><button class="btn btn-sm btn-primary" type="submit" value="รายละเอียด" onclick="callActionGotoDetle(<%=bean.getLoanreq_id()%>)"><i class="glyphicon glyphicon-folder-open"></i></button></td>
                                                                 </tr>
 
-                                                            <%}%>
+                                                                <%}%>
 
-                                                            <%} else {%>
+                                                                <%} else {%>
                                                             <br><br>
                                                             <strong style="color: red">ไม่พบข้อมูลสมาชิก</strong>        
                                                             <%}%>
 
                                                             </tbody>
-                                                            <tfoot>
-                                                                <tr>
-                                                                    <th>ลำดับ  </th>
-                                                                    <th>รหัสสินเชื่อ  </th>
-                                                                    <th>ชื่อ-นามสกุล </th>
-                                                                    <th>เบอร์โทร
-                                                                    </th>
-                                                                    <th>อีเมล์
-                                                                    </th>
-                                                                    <th>วงเงินที่ขอ
-                                                                    </th>
-                                                                    <th>ส่งขอมูลวันที่
-                                                                    </th>
-                                                                    <th>ลบ
-                                                                    </th>
-                                                                    <th>รายละเอียด
-                                                                    </th>
-
-                                                                </tr>
-                                                            </tfoot>
                                                         </table>
                                                     </div>
                                                 </div>
@@ -155,24 +134,28 @@
     <script type="text/javascript">
 
         function callActionGotoDelete(loanreq_id) {
-//        confirm("คุณต้องการลบขอ้มูลใช่หรือไม่");
-//        swal("Here's a message!", "It's pretty, isn't it?");
-//            swal({
-//                title: "คุณ แน่ใจแล้วใช่ไหม ?",
-//                text: "ลบรายการขอสินเชื่อ !",
-//                timer: 10000,
-//                type: "warning",
-//                showCancelButton: true,
-//                confirmButtonColor: "#DD6B55",
-//                confirmButtonText: "ใช่,ลบเลย !",
-//                closeOnConfirm: false
-//            },
-//                    function () {
-//                        swal("ลบ!", "ตกลง", "success");
-//                    });
-           document.formshowdaterequestloan.loanreq_id.value = loanreq_id;
-            document.formshowdaterequestloan.todo.value = 'deleteRcheck';
-            document.formshowdaterequestloan.submit();
+            swal({
+                title: "คุณ แน่ใจแล้วใช่หรือไม่ ?",
+                text: "คุณแน่ใจแล้วใช่หรือไม่ที่จะลบข้อมูล ลูกค้า!",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#DD6B55",
+                confirmButtonText: "ใช่, ลบเลย!",
+                cancelButtonText: "ไม่, ออกเลย!",
+                closeOnConfirm: false,
+                closeOnCancel: false
+            },
+                    function (isConfirm) {
+                        document.formshowdaterequestloan.loanreq_id.value = loanreq_id;
+                        document.formshowdaterequestloan.todo.value = 'deleteRcheck';
+
+                        if (isConfirm) {
+                            document.formshowdaterequestloan.submit();
+                            swal("ลบ !", "คุณ ลบ สำเร็จแล้ว.", "success");
+                        } else {
+                            swal("ออก", "คุณไม่ลบแล้วใช่หรือไม่ :)", "error");
+                        }
+                    });
         }
         function callActionGotoDetle(loanreq_id) {
             document.formshowdaterequestloan.loanreq_id.value = loanreq_id;
@@ -194,61 +177,61 @@
 
     </script> 
 
-      <script>
-                                                                function GotoDelete() {
-                                                                    swal({
-                                                                        title: "คุณ แน่ใจแล้วใช่ไหม ?",
-                                                                        text: "ลบรายการขอสินเชื่อ !",
-                                                                        type: "warning",
-                                                                        showCancelButton: true,
-                                                                        confirmButtonColor: "#DD6B55",
-                                                                        confirmButtonText: "ใช่,ลบเลย !",
-                                                                        closeOnConfirm: false
-                                                                    },
-                                                                            function () {
-                                                                                swal("ลบ!", "ตกลง", "success");
+    <script>
+        function GotoDelete() {
+            swal({
+                title: "คุณ แน่ใจแล้วใช่ไหม ?",
+                text: "ลบรายการขอสินเชื่อ !",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#DD6B55",
+                confirmButtonText: "ใช่,ลบเลย !",
+                closeOnConfirm: false
+            },
+                    function () {
+                        swal("ลบ!", "ตกลง", "success");
 
-                                                                            });
-                                                                }
-                                                            </script>
-<div>
-                                                            <%
-                                                                if ("ok".equals(msg)) {
-                                                            %>
-                                                            <script >
-                                                                function check() {
-                                                                    $(document).ready(function () {
-                                                                        swal({
-                                                                            title: "สำเร็จ",
-                                                                            text: "คุณลบข้อมูลสำเร็จ !",
-                                                                            type: "success",
-                                                                            confirmButtonText: "ตกลง!"
-                                                                        },
-                                                                                function () {
-                                                                                    window.location.href = 'PageAction.do?todo=gotoPageManagermentLoan';
-                                                                                });
-                                                                    });
-                                                                }
-                                                            </script>
+                    });
+        }
+    </script>
+    <div>
+        <%
+            if ("ok".equals(msg)) {
+        %>
+        <script >
+            function check() {
+                $(document).ready(function () {
+                    swal({
+                        title: "สำเร็จ",
+                        text: "คุณลบข้อมูลสำเร็จ !",
+                        type: "success",
+                        confirmButtonText: "ตกลง!"
+                    },
+                            function () {
+//                                window.location.href = 'PageAction.do?todo=gotoPageManagermentLoan';
+                            });
+                });
+            }
+        </script>
 
-                                                            <%} else if ("no".equals(msg)) {
-                                                            %>
-                                                            <script >
-                                                                function check() {
-                                                                    swal({
-                                                                        title: "ไม่สำเร็จ",
-                                                                        text: "คุณลบข้อมูลไม่สำเร็จ !",
-                                                                        type: "error",
-                                                                        confirmButtonText: "ตกลง!"
-                                                                    },
-                                                                            function () {
-                                                                                window.location.href = 'PageAction.do?todo=gotoPageManagermentLoan';
-                                                                            });
-                                                                }
-                                                                ;
+        <%} else if ("no".equals(msg)) {
+        %>
+        <script >
+            function check() {
+                swal({
+                    title: "ไม่สำเร็จ",
+                    text: "คุณลบข้อมูลไม่สำเร็จ !",
+                    type: "error",
+                    confirmButtonText: "ตกลง!"
+                },
+                        function () {
+//                            window.location.href = 'PageAction.do?todo=gotoPageManagermentLoan';
+                        });
+            }
+            ;
 
-                                                            </script>
-                                                            <%   }
-                                                            %>
-                                                        </div>
+        </script>
+        <%   }
+        %>
+    </div>
 </html>

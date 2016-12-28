@@ -11,11 +11,17 @@ package com.ws;
  */
 public class ApproveLoanBankWs {
 
-    public  int insertApproveClient(com.ws.ApproveLoanBean approveLoanBean) {
+    public int insertApproveClient(com.ws.ApproveLoanBean approveLoanBean) {
         com.ws.ApproveClientWebService_Service service = new com.ws.ApproveClientWebService_Service();
         com.ws.ApproveClientWebService port = service.getApproveClientWebServicePort();
         return port.insertApproveClient(approveLoanBean);
     }
+
+//    public  int insertApproveClient(com.ws.ApproveLoanBean approveLoanBean) {
+//        com.ws.ApproveClientWebService_Service service = new com.ws.ApproveClientWebService_Service();
+//        com.ws.ApproveClientWebService port = service.getApproveClientWebServicePort();
+//        return port.insertApproveClient(approveLoanBean);
+//    }
     
     
 }

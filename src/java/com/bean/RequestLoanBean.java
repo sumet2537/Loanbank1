@@ -35,11 +35,11 @@ public class RequestLoanBean {
 //    private String addresssenddoc;
     private String jobtype;
     private String hometype;
-    private Double tradingprice;
-    private Double creditloan;
+    private double tradingprice;
+    private double creditloan;
     private int lncome_per_month;
-    private Double periodloan;
-    private Double netprofit;
+    private double periodloan;
+    private double netprofit;
 
     private String copyidcard;
     private String copylicenses;
@@ -84,8 +84,8 @@ public class RequestLoanBean {
     private String district_p;
     private String address_p;
     private String jobtype_p;
-    private Double periodloan_p;
-    private Double netprofit_p;
+    private double periodloan_p;
+    private double netprofit_p;
     private String copyidcard_p;
     private String copydocumenthome_p;
     private String salary_slip_p;
@@ -111,8 +111,8 @@ public class RequestLoanBean {
     private String district_k;
     private String address_k;
     private String jobtype_k;
-    private Double periodloan_k;
-    private Double netprofit_k;
+    private double periodloan_k;
+    private double netprofit_k;
     private String copyidcard_k;
     private String copydocumenthome_k;
     private String salary_slip_k;
@@ -250,21 +250,71 @@ public class RequestLoanBean {
         this.jobtype_p = jobtype_p;
     }
 
-    public Double getPeriodloan_p() {
+    public double getTradingprice() {
+        return tradingprice;
+    }
+
+    public void setTradingprice(double tradingprice) {
+        this.tradingprice = tradingprice;
+    }
+
+    public double getCreditloan() {
+        return creditloan;
+    }
+
+    public void setCreditloan(double creditloan) {
+        this.creditloan = creditloan;
+    }
+
+    public double getPeriodloan() {
+        return periodloan;
+    }
+
+    public void setPeriodloan(double periodloan) {
+        this.periodloan = periodloan;
+    }
+
+    public double getNetprofit() {
+        return netprofit;
+    }
+
+    public void setNetprofit(double netprofit) {
+        this.netprofit = netprofit;
+    }
+
+    public double getPeriodloan_p() {
         return periodloan_p;
     }
 
-    public void setPeriodloan_p(Double periodloan_p) {
+    public void setPeriodloan_p(double periodloan_p) {
         this.periodloan_p = periodloan_p;
     }
 
-    public Double getNetprofit_p() {
+    public double getNetprofit_p() {
         return netprofit_p;
     }
 
-    public void setNetprofit_p(Double netprofit_p) {
+    public void setNetprofit_p(double netprofit_p) {
         this.netprofit_p = netprofit_p;
     }
+
+    public double getPeriodloan_k() {
+        return periodloan_k;
+    }
+
+    public void setPeriodloan_k(double periodloan_k) {
+        this.periodloan_k = periodloan_k;
+    }
+
+    public double getNetprofit_k() {
+        return netprofit_k;
+    }
+
+    public void setNetprofit_k(double netprofit_k) {
+        this.netprofit_k = netprofit_k;
+    }
+
+   
 
     public String getCopyidcard_p() {
         return copyidcard_p;
@@ -450,21 +500,7 @@ public class RequestLoanBean {
         this.jobtype_k = jobtype_k;
     }
 
-    public Double getPeriodloan_k() {
-        return periodloan_k;
-    }
-
-    public void setPeriodloan_k(Double periodloan_k) {
-        this.periodloan_k = periodloan_k;
-    }
-
-    public Double getNetprofit_k() {
-        return netprofit_k;
-    }
-
-    public void setNetprofit_k(Double netprofit_k) {
-        this.netprofit_k = netprofit_k;
-    }
+    
 
     public String getCopyidcard_k() {
         return copyidcard_k;
@@ -697,37 +733,6 @@ public class RequestLoanBean {
         this.lncome_per_month = lncome_per_month;
     }
 
-    public Double getTradingprice() {
-        return tradingprice;
-    }
-
-    public void setTradingprice(Double tradingprice) {
-        this.tradingprice = tradingprice;
-    }
-
-    public Double getCreditloan() {
-        return creditloan;
-    }
-
-    public void setCreditloan(Double creditloan) {
-        this.creditloan = creditloan;
-    }
-
-    public Double getPeriodloan() {
-        return periodloan;
-    }
-
-    public void setPeriodloan(Double periodloan) {
-        this.periodloan = periodloan;
-    }
-
-    public Double getNetprofit() {
-        return netprofit;
-    }
-
-    public void setNetprofit(Double netprofit) {
-        this.netprofit = netprofit;
-    }
 
     public String getUpdated() {
         return updated;

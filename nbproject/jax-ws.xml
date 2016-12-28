@@ -10,7 +10,7 @@
   </services>
   <clients>
     <client name="ApproveClientWebService">
-      <wsdl-url>http://localhost:8080/TestProject/ApproveClientWebService?wsdl</wsdl-url>
+      <wsdl-url>http://localhost:8080/TestProject/ApproveClientWebService?WSDL</wsdl-url>
       <local-wsdl-file>localhost_8080/TestProject/ApproveClientWebService.wsdl</local-wsdl-file>
       <package-name>com.ws</package-name>
       <catalog-file>catalog.xml</catalog-file>
@@ -29,7 +29,7 @@
         </wsimport-option>
         <wsimport-option>
           <wsimport-option-name>wsdlLocation</wsimport-option-name>
-          <wsimport-option-value>http://localhost:8080/TestProject/ApproveClientWebService?wsdl</wsimport-option-value>
+          <wsimport-option-value>http://localhost:8080/TestProject/ApproveClientWebService?WSDL</wsimport-option-value>
         </wsimport-option>
         <wsimport-option>
           <wsimport-option-name>xnocompile</wsimport-option-name>

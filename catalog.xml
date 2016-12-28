@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
     <system systemId="http://localhost:8080/TestProject/ApproveClientWebService?wsdl" uri="src/conf/xml-resources/web-service-references/ApproveClientWebService/wsdl/localhost_8080/TestProject/ApproveClientWebService.wsdl"/>
+    <system systemId="http://localhost:8080/TestProject/ApproveClientWebService?WSDL" uri="src/conf/xml-resources/web-service-references/ApproveClientWebService/wsdl/localhost_8080/TestProject/ApproveClientWebService.wsdl"/>
     <system systemId="http://localhost:8080/TestProject/ApproveClientWebService?xsd=1" uri="src/conf/xml-resources/web-service-references/ApproveClientWebService/wsdl/localhost_8080/TestProject/ApproveClientWebService.xsd_1.xsd"/>
 </catalog>

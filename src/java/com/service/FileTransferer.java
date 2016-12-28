@@ -25,7 +25,9 @@ import javax.xml.ws.WebServiceException;
 public class FileTransferer {
 
     public String upload(String fileName, byte[] imageBytes) {
-
+        if(imageBytes!= null){
+                    
+               
         String filePath = "/Users/brass/Documents/Loanbank1/web/image/uploade/" + fileName;
           System.out.println("Received imageBytes:  " + imageBytes);
 
@@ -41,6 +43,7 @@ public class FileTransferer {
             System.err.println(ex);
             throw new WebServiceException(ex);
         }
+         }
         return  "SUCCESS";
     }
 

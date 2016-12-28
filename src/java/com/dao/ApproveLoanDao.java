@@ -175,8 +175,8 @@ public class ApproveLoanDao {
         Connection con = null;
         con = dbConnect.openNewConnection();
         ResultSet rs = null;
-        SenddatawsapproveBean bean = null;
-        String sql = "select * from tbl_approveloan where loanreq_id=? ";
+        SenddatawsapproveBean bean = null; //where loanreq_id=?
+        String sql = "select * from tbl_approveloan ";
         com.mysql.jdbc.PreparedStatement p = null;
         ArrayList<SenddatawsapproveBean> approvelist = new ArrayList<SenddatawsapproveBean>();
         try {
@@ -190,7 +190,7 @@ public class ApproveLoanDao {
                 bean.setCitizen_id(rs.getString("citizen_id"));
                 bean.setJudgment(rs.getString("judgment"));
                 bean.setLoanstatusbank(rs.getString("loanstatusbank"));
-                bean.setApprovedamount(rs.getDouble("birthdate"));
+                bean.setApprovedamount(rs.getDouble("approvedamount"));
                 bean.setInstalllments(rs.getDouble("installlments"));
                 bean.setPosition(rs.getString("position"));
                 bean.setCreatedby(rs.getString("createdby"));

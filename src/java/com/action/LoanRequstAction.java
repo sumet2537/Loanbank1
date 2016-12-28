@@ -233,7 +233,7 @@ public class LoanRequstAction extends DispatchAction {
         List<RequestLoanBean> loanList = new ArrayList<RequestLoanBean>();
         loanList = loandao.selectAll();
         request.getSession().removeAttribute("loanList");
-        request.getSession().setAttribute("loanList", loanList);
+        request.getSession().setAttribute("requestList", loanList);
         request.removeAttribute("deletesuccess");
         request.setAttribute("deletesuccess", msg);
         return mapping.findForward("gotoPageManagermentLoan");
